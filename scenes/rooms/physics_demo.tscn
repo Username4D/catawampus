@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c1pl3y6t7d8ck"]
+
+[ext_resource type="PackedScene" uid="uid://ca5lr5xr5ekss" path="res://scenes/player/player.tscn" id="1_g3pqu"]
+[ext_resource type="Script" uid="uid://ds6u6omr2rewe" path="res://scripts/rooms/physics_demo.gd" id="1_owhcu"]
+[ext_resource type="Texture2D" uid="uid://b4nrrvkog4cdv" path="res://icon.svg" id="2_58iwp"]
+[ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="4_83vjn"]
+[ext_resource type="PackedScene" uid="uid://bodo6c560xmkq" path="res://scenes/objects/saw.tscn" id="5_hew8d"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_owhcu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58iwp"]
+size = Vector2(1696, 384)
+
+[node name="physics_demo" type="Node2D" unique_id=1277096888]
+script = ExtResource("1_owhcu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=498188343]
+scale = Vector2(0.43999973, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=257324902]
+position = Vector2(816, 608)
+scale = Vector2(1696.0001, 384.00003)
+mesh = SubResource("QuadMesh_owhcu")
+texture = ExtResource("2_58iwp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1191109272]
+position = Vector2(816, 608)
+shape = SubResource("RectangleShape2D_58iwp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=568083246]
+position = Vector2(1056, -64)
+scale = Vector2(0.43999973, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2" unique_id=971841742]
+position = Vector2(816, 608)
+scale = Vector2(1696.0001, 384.00003)
+mesh = SubResource("QuadMesh_owhcu")
+texture = ExtResource("2_58iwp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=135439178]
+position = Vector2(816, 608)
+shape = SubResource("RectangleShape2D_58iwp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1662302426]
+position = Vector2(1888, 32)
+scale = Vector2(0.43999973, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3" unique_id=1493436539]
+position = Vector2(816, 608)
+scale = Vector2(1696.0001, 384.00003)
+mesh = SubResource("QuadMesh_owhcu")
+texture = ExtResource("2_58iwp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1293482698]
+position = Vector2(816, 608)
+shape = SubResource("RectangleShape2D_58iwp")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1078260108]
+position = Vector2(3040, -64)
+scale = Vector2(0.43999973, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4" unique_id=106929823]
+position = Vector2(816, 608)
+scale = Vector2(1696.0001, 384.00003)
+mesh = SubResource("QuadMesh_owhcu")
+texture = ExtResource("2_58iwp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=258587294]
+position = Vector2(816, 608)
+shape = SubResource("RectangleShape2D_58iwp")
+
+[node name="player" parent="." unique_id=1759193139 instance=ExtResource("1_g3pqu")]
+position = Vector2(64, 224)
+
+[node name="Camera" type="Camera2D" parent="." unique_id=122210821]
+position = Vector2(576, 324)
+limit_top = -174
+limit_bottom = 955
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="spike" parent="." unique_id=395264293 instance=ExtResource("4_83vjn")]
+position = Vector2(2656, 672)
+
+[node name="spike2" parent="." unique_id=1121009484 instance=ExtResource("4_83vjn")]
+position = Vector2(2720, 672)
+
+[node name="spike3" parent="." unique_id=1872470364 instance=ExtResource("4_83vjn")]
+position = Vector2(2784, 672)
+
+[node name="spike4" parent="." unique_id=1833471305 instance=ExtResource("4_83vjn")]
+position = Vector2(2848, 672)
+
+[node name="spike5" parent="." unique_id=2045649271 instance=ExtResource("4_83vjn")]
+position = Vector2(2912, 672)
+
+[node name="spike6" parent="." unique_id=669725989 instance=ExtResource("4_83vjn")]
+position = Vector2(2976, 672)
+
+[node name="saw" parent="." unique_id=1926946074 instance=ExtResource("5_hew8d")]
+position = Vector2(3456, 288)
