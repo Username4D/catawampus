@@ -9,6 +9,7 @@ size = Vector2(96, 48)
 size = Vector2(96, 48)
 
 [node name="player" type="CharacterBody2D" unique_id=1759193139 groups=["player"]]
+platform_on_leave = 1
 script = ExtResource("1_8afob")
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=762497385]

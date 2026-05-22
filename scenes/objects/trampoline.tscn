@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://blvjrhlfr4h10"]
+
+[ext_resource type="Script" uid="uid://cjghseucr5s06" path="res://scripts/objects/trampoline.gd" id="1_tgvp2"]
+[ext_resource type="Texture2D" uid="uid://bxgk4h2npmguu" path="res://assets/catawampus_tiles.svg" id="2_1pgtl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thj4v"]
+size = Vector2(64, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dx8t"]
+atlas = ExtResource("2_1pgtl")
+region = Rect2(512, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltp8l"]
+atlas = ExtResource("2_1pgtl")
+region = Rect2(640, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgvp2"]
+size = Vector2(64, 4.37)
+
+[node name="trampoline" type="AnimatableBody2D" unique_id=1869712095]
+script = ExtResource("1_tgvp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=259964448]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_thj4v")
+
+[node name="sprite_spring" type="TextureRect" parent="." unique_id=8740059]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+pivot_offset = Vector2(32, 64)
+texture = SubResource("AtlasTexture_3dx8t")
+expand_mode = 2
+
+[node name="sprite_pad" type="Sprite2D" parent="." unique_id=76292396]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_ltp8l")
+
+[node name="player_detector" type="Area2D" parent="." unique_id=282288428]
+position = Vector2(0, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detector" unique_id=756281613]
+position = Vector2(0, -3.645)
+shape = SubResource("RectangleShape2D_tgvp2")
