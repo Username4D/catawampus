@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 func _ready() -> void:
 	self.add_child(cooldown)
 	cooldown.wait_time = 0.1
-	cooldown.one_shot = true
+	cooldown.one_shot = true 
 	collision.connect(collide)
 
 func collide(player):

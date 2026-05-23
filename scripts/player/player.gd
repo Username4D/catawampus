@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 var speed = 0
-var max_speed = 440
+var max_speed = 500
 var has_accelerated = false
-var acceleration = 300
+var acceleration = 500
 var friction = 800
 @export var max_jump_strength = 400
 @export var jump_strength = 60
@@ -32,6 +32,8 @@ func _physics_process(delta: float) -> void:
 				has_accelerated = false
 	elif velocity.y < 0:
 		speed = move_toward(speed, 0, air_resistance * delta)
+	elif speed > max_speed:
+		speed = move_toward(speed, max_speed, air_resistance * delta * 7)
 	velocity.x = speed
 	velocity.y += get_gravity().y * delta
 	move_and_slide()
@@ -40,3 +42,8 @@ func _physics_process(delta: float) -> void:
 func _on_death() -> void:
 	await get_tree().create_timer(1).timeout
 	self.position = last_checkpoint_position
+	velocity = Vector2.ZERO
+	speed = 0
+
+func _on_checkpoint_collected(pos: Vector2) -> void:
+	last_checkpoint_position = pos

@@ -132,6 +132,15 @@
     </g>
     <path d="M34,40L46,40C46,43.311 43.311,46 40,46C36.689,46 34,43.311 34,40Z" style="fill:white;fill-opacity:0.21;"/>
     <path d="M34,40L46,40C46,43.311 43.311,46 40,46C36.689,46 34,43.311 34,40ZM35.116,41.013C35.584,43.28 37.594,44.987 40,44.987C42.406,44.987 44.416,43.28 44.884,41.013L35.116,41.013Z" style="fill:white;fill-opacity:0;"/>
+    <g transform="matrix(1,0,0,1,16,0)">
+        <path d="M38,37L40,40L38,43" style="fill:white;fill-opacity:0;stroke:white;stroke-width:1.01px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,18.579096,0)">
+        <path d="M38,37L40,40L38,43" style="fill:rgb(255,245,132);fill-opacity:0;stroke:white;stroke-width:1.01px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,16,0)">
+        <path d="M34,40L46,40C46,43.311 43.311,46 40,46C36.689,46 34,43.311 34,40ZM35.116,41.013C35.584,43.28 37.594,44.987 40,44.987C42.406,44.987 44.416,43.28 44.884,41.013L35.116,41.013Z" style="fill:white;fill-opacity:0;"/>
+    </g>
     <path d="M32,32L40,16L48,32L32,32Z" style="fill:rgb(230,230,230);"/>
     <path d="M32,32L40,16L48,32L32,32ZM33.967,30.785L46.033,30.785L40,18.718L33.967,30.785Z" style="fill:rgb(206,206,206);"/>
 </svg>

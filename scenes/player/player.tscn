@@ -20,4 +20,5 @@ shape = SubResource("RectangleShape2D_x7p2l")
 self_modulate = Color(0.4509804, 0.5137255, 0.58431375, 1)
 mesh = SubResource("QuadMesh_8afob")
 
+[connection signal="checkpoint_collected" from="." to="." method="_on_checkpoint_collected"]
 [connection signal="death" from="." to="." method="_on_death"]

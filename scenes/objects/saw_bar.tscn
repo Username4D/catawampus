@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://di70e5ig6q85t"]
+
+[ext_resource type="Texture2D" uid="uid://bk3bqailr4nst" path="res://assets/bar_stretchable.svg" id="1_lkqvt"]
+[ext_resource type="Script" uid="uid://bkhdikx8mi6sj" path="res://scripts/objects/saw_bar.gd" id="2_ak3wv"]
+[ext_resource type="PackedScene" uid="uid://bodo6c560xmkq" path="res://scenes/objects/saw.tscn" id="3_flw7n"]
+
+[node name="saw_bar" type="NinePatchRect" unique_id=946883056]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 96.0
+offset_bottom = 480.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lkqvt")
+patch_margin_top = 64
+patch_margin_bottom = 64
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_ak3wv")
+
+[node name="saw" parent="." unique_id=1926946074 instance=ExtResource("3_flw7n")]
+position = Vector2(64, 64)
+scale = Vector2(2, 2)

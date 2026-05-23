@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cmxc3ugrdtk60"]
+
+[ext_resource type="Texture2D" uid="uid://bxgk4h2npmguu" path="res://assets/catawampus_tiles.svg" id="1_0bkie"]
+[ext_resource type="Script" uid="uid://b4nsfmtogsymj" path="res://scripts/objects/float_boost.gd" id="1_o3xwv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3xwv"]
+size = Vector2(64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3fsv"]
+atlas = ExtResource("1_0bkie")
+region = Rect2(400, 272, 96, 96)
+
+[node name="float_boost" type="Area2D" unique_id=1997432394]
+script = ExtResource("1_o3xwv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=633042979]
+shape = SubResource("RectangleShape2D_o3xwv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1978167775]
+rotation = -1.5707964
+texture = SubResource("AtlasTexture_y3fsv")

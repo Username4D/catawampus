@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cji610mdmox23"]
+
+[ext_resource type="Script" uid="uid://c8sbjq8v8fncc" path="res://scripts/objects/checkpoint.gd" id="1_6xeev"]
+[ext_resource type="Texture2D" uid="uid://bxgk4h2npmguu" path="res://assets/catawampus_tiles.svg" id="2_dymgj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erl1y"]
+size = Vector2(64, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyc7d"]
+atlas = ExtResource("2_dymgj")
+region = Rect2(128, 128, 128, 128)
+filter_clip = true
+
+[node name="checkpoint" type="Area2D" unique_id=136548088]
+script = ExtResource("1_6xeev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=136737996]
+shape = SubResource("RectangleShape2D_erl1y")
+
+[node name="highlight_effect" type="Polygon2D" parent="." unique_id=1991680555]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-32, -928, -32, 1024, 32, 1024, 32, -928)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1821913160]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_vyc7d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

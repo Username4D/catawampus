@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bodo6c560xmkq"]
 
 [ext_resource type="Script" uid="uid://c2hcfx74blnvd" path="res://scripts/objects/saw.gd" id="1_av48n"]
-[ext_resource type="Texture2D" uid="uid://b4nrrvkog4cdv" path="res://icon.svg" id="2_5cuac"]
+[ext_resource type="Texture2D" uid="uid://bxgk4h2npmguu" path="res://assets/catawampus_tiles.svg" id="2_av48n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fei71"]
 radius = 32.0
 
-[sub_resource type="SphereMesh" id="SphereMesh_fng7n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cuac"]
+atlas = ExtResource("2_av48n")
+region = Rect2(256, 0, 128, 128)
 
 [node name="saw" type="Area2D" unique_id=1926946074]
 script = ExtResource("1_av48n")
@@ -15,10 +17,9 @@ script = ExtResource("1_av48n")
 scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_fei71")
 
-[node name="texture" type="MeshInstance2D" parent="." unique_id=1208037941]
-position = Vector2(1.9073486e-06, 5.722046e-06)
-scale = Vector2(64.07257, 64.00001)
-mesh = SubResource("SphereMesh_fng7n")
-texture = ExtResource("2_5cuac")
+[node name="texture" type="Sprite2D" parent="." unique_id=1025412538]
+position = Vector2(0, 7.6293945e-06)
+scale = Vector2(0.49999997, 0.50000006)
+texture = SubResource("AtlasTexture_5cuac")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

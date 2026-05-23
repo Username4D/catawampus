@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cl5vpeai2y225"]
+
+[ext_resource type="Script" uid="uid://dpmgsdemsjw3w" path="res://scripts/objects/dash_orb.gd" id="1_74aiv"]
+[ext_resource type="Texture2D" uid="uid://bxgk4h2npmguu" path="res://assets/catawampus_tiles.svg" id="1_eyjaf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_74aiv"]
+radius = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w513k"]
+atlas = ExtResource("1_eyjaf")
+region = Rect2(256, 256, 128, 128)
+filter_clip = true
+
+[node name="dash_orb" type="Area2D" unique_id=1484280067]
+script = ExtResource("1_74aiv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1355164876]
+shape = SubResource("CircleShape2D_74aiv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=990197686]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_w513k")

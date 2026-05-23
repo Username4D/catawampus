@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dtuimle8bs4i"]
+
+[ext_resource type="Texture2D" uid="uid://u2y5c1j1soq0" path="res://assets/bridge_stretchable.svg" id="1_pexfk"]
+[ext_resource type="Script" uid="uid://cmx2xsw3118rw" path="res://scripts/objects/wall.gd" id="2_57faa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt6j4"]
+resource_local_to_scene = true
+size = Vector2(128, 128)
+
+[node name="bridge" type="NinePatchRect" unique_id=213439993]
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("1_pexfk")
+region_rect = Rect2(0, 0, 192, 192)
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_57faa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1106693782]
+physics_interpolation_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1673545713]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_rt6j4")
