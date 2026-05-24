@@ -5,3 +5,4 @@ func _physics_process(delta: float) -> void:
 		if i.is_in_group("player"):
 			if Input.is_action_just_pressed("ui_accept"):
 				i.speed += 600
+				i.velocity.y = -10   

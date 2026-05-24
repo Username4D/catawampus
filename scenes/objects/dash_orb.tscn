@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bxgk4h2npmguu" path="res://assets/catawampus_tiles.svg" id="1_eyjaf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_74aiv"]
-radius = 32.0
+radius = 48.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w513k"]
 atlas = ExtResource("1_eyjaf")

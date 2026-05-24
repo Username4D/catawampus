@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://s1l4orc5ldur"]
+
+[ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_d3gx8"]
+[ext_resource type="PackedScene" uid="uid://cl5vpeai2y225" path="res://scenes/objects/dash_orb.tscn" id="2_not8u"]
+[ext_resource type="PackedScene" uid="uid://cmxc3ugrdtk60" path="res://scenes/objects/float_boost.tscn" id="3_ppv8m"]
+[ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="4_cjtbq"]
+[ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_oqqab"]
+[ext_resource type="PackedScene" uid="uid://cji610mdmox23" path="res://scenes/objects/checkpoint.tscn" id="6_bxkkf"]
+[ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="7_cjtbq"]
+
+[node name="level_part" unique_id=1643637355 instance=ExtResource("1_d3gx8")]
+
+[node name="end" parent="." index="1" unique_id=2020603390]
+offset_left = 7168.0
+offset_right = 7936.0
+
+[node name="dash_orb3" parent="." index="2" unique_id=1484280067 instance=ExtResource("2_not8u")]
+position = Vector2(3488, -160)
+
+[node name="dash_orb2" parent="." index="3" unique_id=377568307 instance=ExtResource("2_not8u")]
+position = Vector2(1568, -96)
+
+[node name="float_boost" parent="." index="4" unique_id=1997432394 instance=ExtResource("3_ppv8m")]
+position = Vector2(2912, 96)
+
+[node name="float_boost2" parent="." index="5" unique_id=1454624331 instance=ExtResource("3_ppv8m")]
+position = Vector2(2976, 96)
+
+[node name="float_boost3" parent="." index="6" unique_id=798264785 instance=ExtResource("3_ppv8m")]
+position = Vector2(3040, 96)
+
+[node name="float_boost4" parent="." index="7" unique_id=138067124 instance=ExtResource("3_ppv8m")]
+position = Vector2(3104, 96)
+
+[node name="float_boost5" parent="." index="8" unique_id=231536606 instance=ExtResource("3_ppv8m")]
+position = Vector2(3168, 96)
+
+[node name="float_boost6" parent="." index="9" unique_id=409129193 instance=ExtResource("3_ppv8m")]
+position = Vector2(3232, 96)
+
+[node name="bridge" parent="." index="10" unique_id=213439993 instance=ExtResource("4_cjtbq")]
+offset_left = 4160.0
+offset_top = 64.0
+offset_right = 5696.0
+offset_bottom = 1280.0
+
+[node name="spike" parent="." index="11" unique_id=395264293 instance=ExtResource("5_oqqab")]
+position = Vector2(4704, 32)
+
+[node name="spike2" parent="." index="12" unique_id=2002091626 instance=ExtResource("5_oqqab")]
+position = Vector2(4640, 32)
+
+[node name="spike3" parent="." index="13" unique_id=1056467351 instance=ExtResource("5_oqqab")]
+position = Vector2(4768, 32)
+
+[node name="spike4" parent="." index="14" unique_id=673047378 instance=ExtResource("5_oqqab")]
+position = Vector2(4832, 32)
+
+[node name="spike5" parent="." index="15" unique_id=745797554 instance=ExtResource("5_oqqab")]
+position = Vector2(4896, 32)
+
+[node name="spike6" parent="." index="16" unique_id=356573694 instance=ExtResource("5_oqqab")]
+position = Vector2(4960, 32)
+
+[node name="spike7" parent="." index="17" unique_id=31362264 instance=ExtResource("5_oqqab")]
+position = Vector2(4576, 32)
+
+[node name="checkpoint" parent="." index="18" unique_id=136548088 instance=ExtResource("6_bxkkf")]
+position = Vector2(96, -32)
+
+[node name="bridge2" parent="." index="19" unique_id=679681561 instance=ExtResource("4_cjtbq")]
+offset_left = 2368.0
+offset_top = 192.0
+offset_right = 3008.0
+offset_bottom = 864.0
+
+[node name="spike8" parent="." index="20" unique_id=695648817 instance=ExtResource("5_oqqab")]
+position = Vector2(992, -32)
+
+[node name="NinePatchRect" parent="." index="21" unique_id=362470519 instance=ExtResource("7_cjtbq")]
+offset_left = 6144.0
+offset_top = 128.0
+offset_right = 6848.0
+offset_bottom = 1280.0

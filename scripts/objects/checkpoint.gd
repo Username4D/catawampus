@@ -4,7 +4,7 @@ var collected = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and !collected:
-		body.checkpoint_collected.emit(self.position)
+		body.checkpoint_collected.emit(self.global_position)
 		$highlight_effect.color.a = 0.5
 		collected = true
 
