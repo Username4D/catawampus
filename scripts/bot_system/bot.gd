@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@onready var input = BotInput.new()
+
+
 @export var speed = 0
 var max_speed = 700
 var has_accelerated = false
@@ -17,12 +20,12 @@ signal checkpoint_collected(pos: Vector2)
 signal death
 
 func _ready() -> void:
-	pass
+	input.press("ui_accept")
 
 func _physics_process(delta: float) -> void:
 	if state == states.ALIVE:
 		if is_on_floor():
-			if Input.is_action_pressed("ui_accept"):
+			if input.is_action_pressed("ui_accept"):
 				has_accelerated = true
 				if speed < max_speed:
 					speed = move_toward(speed, max_speed, delta * acceleration)
@@ -55,6 +58,7 @@ func _on_death() -> void:
 	speed = 0
 	state = states.ALIVE
 
-func _on_checkpoint_collected(pos: Vector2) -> void:
+func _on_checkpoint_collected(pos: Vector2, input_chain: Array) -> void:
 	last_checkpoint_position = pos
-	print([self.acceleration, speed, jump_strength, has_accelerated]) 
+	input.parse_input_chain(input_chain)
+	print([self.acceleration, speed, jump_strength, has_accelerated])

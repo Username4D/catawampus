@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dgc36x7nxig8d"]
+
+[ext_resource type="PackedScene" uid="uid://ca5lr5xr5ekss" path="res://scenes/player/player.tscn" id="1_tu7b2"]
+[ext_resource type="Script" uid="uid://wh380v8qkon0" path="res://scripts/bot_system/bot.gd" id="2_y56si"]
+
+[node name="bot" unique_id=1759193139 groups=["bot"] instance=ExtResource("1_tu7b2")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_y56si")

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="BotMacro" format=3]
+
+[ext_resource type="Script" path="res://scripts/bot_system/bot_input_action.gd" id="1_qfey4"]
+[ext_resource type="Script" path="res://scripts/bot_system/bot_macro.gd" id="2_evft1"]
+
+[sub_resource type="Resource" id="Resource_lojpl"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 0.8333333333333343
+
+[sub_resource type="Resource" id="Resource_j531n"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 2.0499999999999976
+
+[sub_resource type="Resource" id="Resource_h58w4"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 3.4499999999999926
+
+[sub_resource type="Resource" id="Resource_r8ojx"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 4.3666666666666565
+
+[sub_resource type="Resource" id="Resource_syps8"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 5.28333333333332
+
+[sub_resource type="Resource" id="Resource_algc3"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 5.816666666666651
+
+[sub_resource type="Resource" id="Resource_ktpvu"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 7.04999999999998
+
+[sub_resource type="Resource" id="Resource_jfhb2"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 7.283333333333313
+
+[sub_resource type="Resource" id="Resource_1jtay"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 8.816666666666684
+
+[sub_resource type="Resource" id="Resource_3rtta"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 9.033333333333362
+
+[resource]
+script = ExtResource("2_evft1")
+input_chain = Array[ExtResource("1_qfey4")]([SubResource("Resource_lojpl"), SubResource("Resource_j531n"), SubResource("Resource_h58w4"), SubResource("Resource_r8ojx"), SubResource("Resource_syps8"), SubResource("Resource_algc3"), SubResource("Resource_ktpvu"), SubResource("Resource_jfhb2"), SubResource("Resource_1jtay"), SubResource("Resource_3rtta")])

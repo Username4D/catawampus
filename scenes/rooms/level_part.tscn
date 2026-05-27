@@ -2,15 +2,19 @@
 
 [ext_resource type="Script" uid="uid://cve2rnexbsxqx" path="res://scripts/rooms/level_part.gd" id="1_ho2v1"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="2_7yj5h"]
+[ext_resource type="PackedScene" uid="uid://cji610mdmox23" path="res://scenes/objects/checkpoint.tscn" id="3_7yj5h"]
 
 [node name="level_part" type="Node2D" unique_id=1643637355]
 script = ExtResource("1_ho2v1")
 
 [node name="start" parent="." unique_id=213439993 instance=ExtResource("2_7yj5h")]
-offset_right = 1024.0
+offset_right = 1536.0
 offset_bottom = 1344.0
 
 [node name="end" parent="." unique_id=2020603390 instance=ExtResource("2_7yj5h")]
 offset_left = 2816.0
 offset_right = 3584.0
 offset_bottom = 1344.0
+
+[node name="checkpoint" parent="." unique_id=136548088 instance=ExtResource("3_7yj5h")]
+position = Vector2(768, -32)

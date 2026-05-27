@@ -9,6 +9,8 @@ region = Rect2(256, 128, 128, 128)
 filter_clip = true
 
 [node name="spike" type="Area2D" unique_id=395264293]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_htn6p")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=310571013]

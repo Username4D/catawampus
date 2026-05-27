@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="BotMacro" format=3]
+
+[ext_resource type="Script" path="res://scripts/bot_system/bot_input_action.gd" id="1_qfey4"]
+[ext_resource type="Script" path="res://scripts/bot_system/bot_macro.gd" id="2_evft1"]
+
+[sub_resource type="Resource" id="Resource_lojpl"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 0.8833333333333344
+
+[sub_resource type="Resource" id="Resource_j531n"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 2.1333333333333306
+
+[sub_resource type="Resource" id="Resource_h58w4"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 3.1999999999999935
+
+[sub_resource type="Resource" id="Resource_r8ojx"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 4.083333333333324
+
+[sub_resource type="Resource" id="Resource_syps8"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 6.849999999999981
+
+[sub_resource type="Resource" id="Resource_algc3"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 7.183333333333313
+
+[resource]
+script = ExtResource("2_evft1")
+input_chain = Array[ExtResource("1_qfey4")]([SubResource("Resource_lojpl"), SubResource("Resource_j531n"), SubResource("Resource_h58w4"), SubResource("Resource_r8ojx"), SubResource("Resource_syps8"), SubResource("Resource_algc3")])
