@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bwcxpmcubm4uc" path="res://scripts/gameplay/gameplay_scene.gd" id="1_hye4d"]
 [ext_resource type="TileSet" uid="uid://cq6vndlorddfu" path="res://resources/basic_tiles.tres" id="1_iy3ci"]
-[ext_resource type="PackedScene" uid="uid://ca5lr5xr5ekss" path="res://scenes/player/player.tscn" id="2_ob0pt"]
 [ext_resource type="Script" uid="uid://duh6tiyqmsx74" path="res://scripts/objects/spike.gd" id="4_hye4d"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="5_q0vbh"]
+[ext_resource type="PackedScene" uid="uid://d4mt06drxisof" path="res://scenes/player/human_player.tscn" id="6_rfdso"]
 [ext_resource type="PackedScene" uid="uid://dgc36x7nxig8d" path="res://scenes/bot_system/bot.tscn" id="6_va0mq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0vbh"]
@@ -27,9 +27,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="player" parent="." unique_id=1759193139 instance=ExtResource("2_ob0pt")]
-position = Vector2(-576, 384)
-
 [node name="rooms" type="Node2D" parent="." unique_id=1106676845]
 
 [node name="void" type="Area2D" parent="." unique_id=1874620379]
@@ -41,6 +38,55 @@ script = ExtResource("4_hye4d")
 position = Vector2(27776, 1312)
 shape = SubResource("RectangleShape2D_q0vbh")
 
+[node name="void_texture" type="Control" parent="void" unique_id=1324737669]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20768.0
+offset_top = -64.0
+offset_right = 20808.0
+offset_bottom = -24.0
+scale = Vector2(27.445, 1)
+
+[node name="Panel" type="ColorRect" parent="void/void_texture" unique_id=765349687]
+layout_mode = 0
+offset_left = -864.0
+offset_top = 836.33
+offset_right = 1696.0
+offset_bottom = 840.33
+color = Color(0, 0, 0, 1)
+
+[node name="Panel2" type="ColorRect" parent="void/void_texture" unique_id=549154218]
+layout_mode = 0
+offset_left = -864.0
+offset_top = 864.0
+offset_right = 1696.0
+offset_bottom = 872.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel3" type="ColorRect" parent="void/void_texture" unique_id=1566284769]
+layout_mode = 0
+offset_left = -864.0
+offset_top = 896.0
+offset_right = 1696.0
+offset_bottom = 912.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel4" type="ColorRect" parent="void/void_texture" unique_id=1869497155]
+layout_mode = 0
+offset_left = -864.0
+offset_top = 928.0
+offset_right = 1696.0
+offset_bottom = 960.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel5" type="ColorRect" parent="void/void_texture" unique_id=1335804060]
+layout_mode = 0
+offset_left = -864.0
+offset_top = 960.0
+offset_right = 1696.0
+offset_bottom = 992.0
+color = Color(0, 0, 0, 1)
+
 [node name="NinePatchRect" parent="." unique_id=213439993 instance=ExtResource("5_q0vbh")]
 offset_left = -640.0
 offset_top = 416.0
@@ -48,6 +94,9 @@ offset_right = 0.0
 offset_bottom = 768.0
 
 [node name="bot" parent="." unique_id=108248470 instance=ExtResource("6_va0mq")]
+position = Vector2(-576, 384)
+
+[node name="player" parent="." unique_id=1759193139 instance=ExtResource("6_rfdso")]
 position = Vector2(-576, 384)
 
 [connection signal="body_entered" from="void" to="void" method="_on_body_entered"]

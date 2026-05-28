@@ -18,6 +18,16 @@ config/icon="res://icon.svg"
 
 enabled=PackedStringArray("res://addons/gdterm/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://addons/": "teal",
+"res://assets/": "blue",
+"res://resources/": "purple",
+"res://scenes/": "pink",
+"res://scripts/": "red"
+}
+
 [global_group]
 
 player=""

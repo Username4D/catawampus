@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://d4mt06drxisof"]
+
+[ext_resource type="PackedScene" uid="uid://ca5lr5xr5ekss" path="res://scenes/player/base_player.tscn" id="1_jtf0w"]
+[ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="2_71udy"]
+[ext_resource type="Script" uid="uid://covvjugfagkq0" path="res://scripts/player/ui/ui.gd" id="2_nxxqb"]
+[ext_resource type="Texture2D" uid="uid://cvgwn4ww62anw" path="res://assets/button_pause.svg" id="4_7evk0"]
+[ext_resource type="PackedScene" uid="uid://ugflqp07xto7" path="res://scenes/player/ui/leaderboard_part.tscn" id="5_8bnda"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_71udy"]
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[node name="human_player" unique_id=1759193139 instance=ExtResource("1_jtf0w")]
+
+[node name="ui" type="CanvasLayer" parent="." index="2" unique_id=185471253]
+script = ExtResource("2_nxxqb")
+
+[node name="level_progress" type="ProgressBar" parent="ui" index="0" unique_id=1215643998]
+offset_left = 384.0
+offset_top = 48.0
+offset_right = 768.0
+offset_bottom = 80.0
+theme = ExtResource("2_71udy")
+min_value = -11.0
+show_percentage = false
+
+[node name="percentage_label" type="Label" parent="ui/level_progress" index="0" unique_id=1031065208]
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 32.0
+text = "0%"
+label_settings = SubResource("LabelSettings_71udy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pause_button" type="Button" parent="ui" index="1" unique_id=1834703404]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 96.0
+offset_bottom = 96.0
+theme = ExtResource("2_71udy")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+icon = ExtResource("4_7evk0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui" index="2" unique_id=1730055848]
+offset_left = 896.0
+offset_top = 32.0
+offset_right = 1120.0
+offset_bottom = 64.0
+
+[node name="leaderboard_part" parent="ui/VBoxContainer" index="0" unique_id=1217596780 instance=ExtResource("5_8bnda")]
+layout_mode = 2
+
+[node name="leaderboard_part2" parent="ui/VBoxContainer" index="1" unique_id=874084166 instance=ExtResource("5_8bnda")]
+layout_mode = 2
+is_highlighted = false
+text = "Bot1"
+
+[node name="leaderboard_part3" parent="ui/VBoxContainer" index="2" unique_id=201600517 instance=ExtResource("5_8bnda")]
+layout_mode = 2
+is_highlighted = false
+text = "Bot2"
+
+[node name="leaderboard_part4" parent="ui/VBoxContainer" index="3" unique_id=1562604 instance=ExtResource("5_8bnda")]
+layout_mode = 2
+is_highlighted = false
+text = "Bot3"

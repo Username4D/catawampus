@@ -18,4 +18,4 @@ func _ready() -> void:
 		$rooms.add_child(scene)
 		await get_tree().process_frame
 		next_level_position = scene.next_room_position
-		
+	$player.max_x = next_level_position.x

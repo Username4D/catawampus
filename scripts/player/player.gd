@@ -12,6 +12,8 @@ var air_resistance = 100
 var last_checkpoint_position = Vector2.ZERO
 var state = states.ALIVE
 
+@export var max_x = 0
+
 enum states {ALIVE, DEAD, FINISHED}
 signal checkpoint_collected(pos: Vector2)
 signal death
