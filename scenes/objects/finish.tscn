@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dnvi55vl5xix0"]
+
+[ext_resource type="Script" uid="uid://pt667bmntgea" path="res://scripts/objects/finish.gd" id="1_myxr3"]
+[ext_resource type="Texture2D" uid="uid://bxgk4h2npmguu" path="res://assets/catawampus_tiles.svg" id="1_o4m5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erl1y"]
+size = Vector2(64, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyc7d"]
+atlas = ExtResource("1_o4m5r")
+region = Rect2(128, 128, 128, 128)
+filter_clip = true
+
+[node name="finish" type="Area2D" unique_id=136548088]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_myxr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=136737996]
+shape = SubResource("RectangleShape2D_erl1y")
+
+[node name="highlight_effect" type="Polygon2D" parent="." unique_id=1991680555]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-32, -928, -32, 1024, 32, 1024, 32, -928)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1821913160]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_vyc7d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

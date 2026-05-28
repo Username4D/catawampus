@@ -29,6 +29,18 @@ rotation_smoothing_enabled = true
 
 [node name="rooms" type="Node2D" parent="." unique_id=1106676845]
 
+[node name="NinePatchRect" parent="." unique_id=213439993 instance=ExtResource("5_q0vbh")]
+offset_left = -640.0
+offset_top = 416.0
+offset_right = 0.0
+offset_bottom = 768.0
+
+[node name="bot" parent="." unique_id=108248470 instance=ExtResource("6_va0mq")]
+position = Vector2(-576, 384)
+
+[node name="player" parent="." unique_id=1759193139 instance=ExtResource("6_rfdso")]
+position = Vector2(-576, 384)
+
 [node name="void" type="Area2D" parent="." unique_id=1874620379]
 collision_layer = 3
 collision_mask = 3
@@ -86,17 +98,5 @@ offset_top = 960.0
 offset_right = 1696.0
 offset_bottom = 992.0
 color = Color(0, 0, 0, 1)
-
-[node name="NinePatchRect" parent="." unique_id=213439993 instance=ExtResource("5_q0vbh")]
-offset_left = -640.0
-offset_top = 416.0
-offset_right = 0.0
-offset_bottom = 768.0
-
-[node name="bot" parent="." unique_id=108248470 instance=ExtResource("6_va0mq")]
-position = Vector2(-576, 384)
-
-[node name="player" parent="." unique_id=1759193139 instance=ExtResource("6_rfdso")]
-position = Vector2(-576, 384)
 
 [connection signal="body_entered" from="void" to="void" method="_on_body_entered"]

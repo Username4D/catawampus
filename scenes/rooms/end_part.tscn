@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dis0kff1b6mv4"]
+
+[ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_7joyc"]
+[ext_resource type="PackedScene" uid="uid://dnvi55vl5xix0" path="res://scenes/objects/finish.tscn" id="2_3dk03"]
+
+[node name="end_part" unique_id=1643637355 instance=ExtResource("1_7joyc")]
+
+[node name="checkpoint" parent="." index="2" unique_id=136548088]
+position = Vector2(2752, -4544)
+
+[node name="finish" parent="." index="3" unique_id=767641733 instance=ExtResource("2_3dk03")]
+position = Vector2(768, -32)

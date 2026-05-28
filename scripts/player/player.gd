@@ -45,7 +45,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = speed
 		velocity.y += get_gravity().y * delta
 		move_and_slide()
-
+	elif state == states.FINISHED:
+		if is_on_floor():
+			speed = move_toward(speed, 0, friction * delta)
+		elif velocity.y < 0:
+			speed = move_toward(speed, 0, air_resistance * delta)
+		elif speed > max_speed:
+			speed = move_toward(speed, max_speed, air_resistance * delta * 5)
+		velocity.x = speed
+		velocity.y += get_gravity().y * delta
+		move_and_slide()
 
 func _on_death() -> void:
 	state = states.DEAD

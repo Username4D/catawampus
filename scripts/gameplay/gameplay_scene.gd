@@ -19,3 +19,8 @@ func _ready() -> void:
 		await get_tree().process_frame
 		next_level_position = scene.next_room_position
 	$player.max_x = next_level_position.x
+	var scene = load("res://scenes/rooms/end_part.tscn").instantiate()
+	scene.position = next_level_position
+	$rooms.add_child(scene)
+	await get_tree().process_frame
+	next_level_position = scene.next_room_position
