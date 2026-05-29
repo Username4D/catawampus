@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="4_cjtbq"]
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_oqqab"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="7_cjtbq"]
-[ext_resource type="Resource" path="res://resources/bot_macros/1/export_macro.tres" id="7_oqqab"]
+[ext_resource type="Resource" uid="uid://1yl2balwpv6k" path="res://resources/bot_macros/1/export_macro.tres" id="7_oqqab"]
 
 [node name="level_part" unique_id=1643637355 instance=ExtResource("1_d3gx8")]
 
@@ -81,4 +81,4 @@ offset_right = 7360.0
 offset_bottom = 1280.0
 
 [node name="checkpoint" parent="." index="21" unique_id=136548088]
-input_chain = ExtResource("7_oqqab")
+input_chains = Array[Resource]([ExtResource("7_oqqab")])

@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ugflqp07xto7" path="res://scenes/player/ui/leaderboard_part.tscn" id="5_8bnda"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_71udy"]
-outline_size = 9
-outline_color = Color(0, 0, 0, 1)
+font_size = 19
+outline_size = 1
 
 [node name="human_player" unique_id=1759193139 instance=ExtResource("1_jtf0w")]
 
@@ -22,6 +22,7 @@ offset_right = 768.0
 offset_bottom = 80.0
 theme = ExtResource("2_71udy")
 min_value = -11.0
+value = 39.6
 show_percentage = false
 
 [node name="percentage_label" type="Label" parent="ui/level_progress" index="0" unique_id=1031065208]
@@ -39,14 +40,9 @@ offset_top = 32.0
 offset_right = 96.0
 offset_bottom = 96.0
 theme = ExtResource("2_71udy")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 34
 icon = ExtResource("4_7evk0")
 icon_alignment = 1

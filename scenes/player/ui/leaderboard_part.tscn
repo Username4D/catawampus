@@ -1,20 +1,52 @@
 [gd_scene format=3 uid="uid://ugflqp07xto7"]
 
 [ext_resource type="Script" uid="uid://d15wk40u33bv8" path="res://scripts/player/ui/leaderboard_part.gd" id="1_hwqb0"]
+[ext_resource type="Script" uid="uid://cjmmhbp1b5312" path="res://addons/StyleboxFancy/StyleBorder.gd" id="2_nhhjp"]
+[ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="3_qsav5"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2wr1"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_nhhjp"]
+offsets = PackedFloat32Array(0, 0.9932432)
+colors = PackedColorArray(1, 1, 1, 0.16470589, 1, 1, 1, 0.07450981)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwqb0"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qsav5"]
+gradient = SubResource("Gradient_nhhjp")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBox" id="StyleBox_qmgg6"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
+script = ExtResource("3_qsav5")
+color = Color(1, 1, 1, 1)
+texture = SubResource("GradientTexture2D_qsav5")
+corner_detail = 1
+shadow_blur = 0
+
+[sub_resource type="Gradient" id="Gradient_apjiv"]
+offsets = PackedFloat32Array(0, 0.9932432)
+colors = PackedColorArray(1, 1, 1, 0.16470589, 1, 1, 1, 0.07450981)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kyykb"]
+gradient = SubResource("Gradient_apjiv")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBox" id="StyleBox_4los4"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
+script = ExtResource("3_qsav5")
+color = Color(1, 1, 1, 1)
+texture = SubResource("GradientTexture2D_kyykb")
+corner_detail = 1
+shadow_blur = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ehg6"]
-font_color = Color(0, 0, 0, 1)
 
 [node name="leaderboard_part" type="Control" unique_id=1217596780]
 custom_minimum_size = Vector2(224, 32)
@@ -28,16 +60,15 @@ text = "PLAYER"
 
 [node name="fill" type="Panel" parent="." unique_id=1320343838]
 layout_mode = 0
-offset_left = 16.0
 offset_right = 224.0
 offset_bottom = 32.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_u2wr1")
+theme_override_styles/panel = SubResource("StyleBox_qmgg6")
 
 [node name="player_highlight" type="Panel" parent="." unique_id=1715076634]
 layout_mode = 0
 offset_right = 16.0
 offset_bottom = 32.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_hwqb0")
+theme_override_styles/panel = SubResource("StyleBox_4los4")
 
 [node name="Label" type="Label" parent="." unique_id=330958403]
 layout_mode = 0

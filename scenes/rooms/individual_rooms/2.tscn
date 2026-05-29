@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_vfgtt"]
 [ext_resource type="PackedScene" uid="uid://cl5vpeai2y225" path="res://scenes/objects/dash_orb.tscn" id="2_uhyyf"]
 [ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="4_6r5ko"]
-[ext_resource type="Resource" path="res://resources/bot_macros/2/export_macro.tres" id="5_cjx5k"]
+[ext_resource type="Resource" uid="uid://c8yytnnj2fqsr" path="res://resources/bot_macros/2/export_macro.tres" id="5_cjx5k"]
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_rfocn"]
 
 [node name="level_part" unique_id=1643637355 instance=ExtResource("1_vfgtt")]
@@ -40,4 +40,4 @@ offset_bottom = 608.0
 position = Vector2(1504, -32)
 
 [node name="checkpoint" parent="." index="9" unique_id=136548088]
-input_chain = ExtResource("5_cjx5k")
+input_chains = Array[Resource]([ExtResource("5_cjx5k")])
