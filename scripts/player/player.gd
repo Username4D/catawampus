@@ -13,7 +13,7 @@ var last_checkpoint_position = Vector2.ZERO
 var state = states.ALIVE
 
 @export var max_x = 0
-
+@export var progress = 0
 enum states {ALIVE, DEAD, FINISHED}
 signal checkpoint_collected(pos: Vector2)
 signal death
@@ -23,6 +23,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if state == states.ALIVE:
+		progress = clamp(position.x / max_x / 0.01, 0, 100)
 		if is_on_floor():
 			if Input.is_action_pressed("ui_accept"):
 				has_accelerated = true

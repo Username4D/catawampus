@@ -5,7 +5,7 @@
 
 [node name="bot" unique_id=1759193139 groups=["bot"] instance=ExtResource("1_tu7b2")]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 4
 script = ExtResource("2_y56si")
 
 [node name="MeshInstance2D" parent="." index="1" unique_id=1784343318]

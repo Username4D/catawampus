@@ -15,15 +15,20 @@ var air_resistance = 100
 var last_checkpoint_position = Vector2.ZERO
 var state = states.ALIVE
 
+@export var max_x = 0
+
 enum states {ALIVE, DEAD, FINISHED}
 signal checkpoint_collected(pos: Vector2)
 signal death
+
+@export var progress = 0
 
 func _ready() -> void:
 	input.press("ui_accept")
 
 func _physics_process(delta: float) -> void:
 	if state == states.ALIVE:
+		progress = clamp(position.x / max_x / 0.01, 0, 100)
 		if is_on_floor():
 			if input.is_action_pressed("ui_accept"):
 				has_accelerated = true
@@ -47,6 +52,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += get_gravity().y * delta
 		move_and_slide()
 	elif state == states.FINISHED:
+		progress = 100
 		if is_on_floor():
 			speed = move_toward(speed, 0, friction * delta)
 		elif velocity.y < 0:

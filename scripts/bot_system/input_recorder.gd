@@ -5,6 +5,7 @@ var bot_input_array: Array[BotInputAction] = []
 var delta_count = 0
 var recording = false
 
+
 func _physics_process(delta: float) -> void:
 	delta_count += delta
 	$Camera.position = $player.position + Vector2($player.speed * delta * 18 ,$player.velocity.y * delta * 18) 

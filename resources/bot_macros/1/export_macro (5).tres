@@ -1,0 +1,107 @@
+[gd_resource type="Resource" script_class="BotMacro" format=3 uid="uid://copmmphhkk74h"]
+
+[ext_resource type="Script" uid="uid://droqrckv2bcbj" path="res://scripts/bot_system/bot_input_action.gd" id="1_qfey4"]
+[ext_resource type="Script" uid="uid://bly23fvrye5" path="res://scripts/bot_system/bot_macro.gd" id="2_evft1"]
+
+[sub_resource type="Resource" id="Resource_lojpl"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 0.8833333333333344
+
+[sub_resource type="Resource" id="Resource_j531n"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 2.116666666666664
+
+[sub_resource type="Resource" id="Resource_h58w4"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 3.399999999999993
+
+[sub_resource type="Resource" id="Resource_r8ojx"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 4.533333333333323
+
+[sub_resource type="Resource" id="Resource_syps8"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 5.149999999999987
+
+[sub_resource type="Resource" id="Resource_algc3"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 5.3833333333333195
+
+[sub_resource type="Resource" id="Resource_ktpvu"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 5.749999999999985
+
+[sub_resource type="Resource" id="Resource_jfhb2"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 6.433333333333316
+
+[sub_resource type="Resource" id="Resource_1jtay"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 8.233333333333322
+
+[sub_resource type="Resource" id="Resource_3rtta"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 9.416666666666714
+
+[sub_resource type="Resource" id="Resource_2o48g"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 10.783333333333449
+
+[sub_resource type="Resource" id="Resource_l81kh"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 11.800000000000166
+
+[sub_resource type="Resource" id="Resource_wokdh"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 12.716666666666878
+
+[sub_resource type="Resource" id="Resource_umnxq"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 13.23333333333357
+
+[sub_resource type="Resource" id="Resource_ib2nj"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 14.383333333333628
+
+[sub_resource type="Resource" id="Resource_v3wlr"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 14.96666666666699
+
+[sub_resource type="Resource" id="Resource_jhvef"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 16.300000000000356
+
+[sub_resource type="Resource" id="Resource_h12vx"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 16.716666666667
+
+[resource]
+script = ExtResource("2_evft1")
+input_chain = [SubResource("Resource_lojpl"), SubResource("Resource_j531n"), SubResource("Resource_h58w4"), SubResource("Resource_r8ojx"), SubResource("Resource_syps8"), SubResource("Resource_algc3"), SubResource("Resource_ktpvu"), SubResource("Resource_jfhb2"), SubResource("Resource_1jtay"), SubResource("Resource_3rtta"), SubResource("Resource_2o48g"), SubResource("Resource_l81kh"), SubResource("Resource_wokdh"), SubResource("Resource_umnxq"), SubResource("Resource_ib2nj"), SubResource("Resource_v3wlr"), SubResource("Resource_jhvef"), SubResource("Resource_h12vx")]
