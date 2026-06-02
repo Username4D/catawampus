@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bd55fakhtloq3"]
+
+[ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_6e0s3"]
+[ext_resource type="Resource" uid="uid://pqoskccqf8wr" path="res://resources/bot_macros/6/export_macro (2).tres" id="2_31g5b"]
+[ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="2_kw38w"]
+[ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="3_bh68q"]
+[ext_resource type="Resource" uid="uid://3rna72misu6r" path="res://resources/bot_macros/6/export_macro (3).tres" id="3_o8unx"]
+[ext_resource type="Resource" uid="uid://dv85r5j3m7yx3" path="res://resources/bot_macros/6/export_macro (5).tres" id="4_iuc8q"]
+[ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="4_octph"]
+[ext_resource type="Resource" uid="uid://b0rpso0msmk2b" path="res://resources/bot_macros/6/export_macro.tres" id="5_ks3he"]
+[ext_resource type="PackedScene" uid="uid://cl5vpeai2y225" path="res://scenes/objects/dash_orb.tscn" id="5_tsf6i"]
+
+[node name="level_part" unique_id=1643637355 instance=ExtResource("1_6e0s3")]
+
+[node name="end" parent="." index="1" unique_id=2020603390]
+offset_left = 7168.0
+offset_right = 7936.0
+
+[node name="checkpoint" parent="." index="2" unique_id=136548088]
+input_chains = Array[Resource]([ExtResource("2_31g5b"), ExtResource("3_o8unx"), ExtResource("4_iuc8q"), ExtResource("5_ks3he")])
+
+[node name="bridge" parent="." index="3" unique_id=213439993 instance=ExtResource("2_kw38w")]
+offset_left = 2048.0
+offset_top = 256.0
+offset_right = 2816.0
+offset_bottom = 1280.0
+
+[node name="spike" parent="." index="4" unique_id=395264293 instance=ExtResource("3_bh68q")]
+position = Vector2(2784, 224)
+
+[node name="bridge2" parent="." index="5" unique_id=638714170 instance=ExtResource("2_kw38w")]
+offset_left = 3008.0
+offset_top = 128.0
+offset_right = 3392.0
+offset_bottom = 1280.0
+
+[node name="NinePatchRect" parent="." index="6" unique_id=93415307 instance=ExtResource("4_octph")]
+offset_left = 3840.0
+offset_top = 128.0
+offset_right = 3968.0
+offset_bottom = 1280.0
+
+[node name="NinePatchRect2" parent="." index="7" unique_id=751366813 instance=ExtResource("4_octph")]
+offset_left = 3840.0
+offset_top = -1408.0
+offset_right = 3968.0
+offset_bottom = -256.0
+
+[node name="spike2" parent="." index="8" unique_id=1629698222 instance=ExtResource("3_bh68q")]
+position = Vector2(3872, 96)
+
+[node name="spike3" parent="." index="9" unique_id=1153343854 instance=ExtResource("3_bh68q")]
+position = Vector2(3936, 96)
+
+[node name="spike4" parent="." index="10" unique_id=558863223 instance=ExtResource("3_bh68q")]
+position = Vector2(3872, -224)
+rotation = 3.1415927
+
+[node name="spike5" parent="." index="11" unique_id=1375341471 instance=ExtResource("3_bh68q")]
+position = Vector2(3936, -224)
+rotation = 3.1415927
+
+[node name="dash_orb" parent="." index="12" unique_id=1484280067 instance=ExtResource("5_tsf6i")]
+position = Vector2(3680, -64)
+
+[node name="NinePatchRect3" parent="." index="13" unique_id=555328861 instance=ExtResource("4_octph")]
+offset_left = 4480.0
+offset_top = 256.0
+offset_right = 4864.0
+offset_bottom = 1280.0
+
+[node name="bridge3" parent="." index="14" unique_id=2132541202 instance=ExtResource("2_kw38w")]
+offset_left = 5248.0
+offset_top = 128.0
+offset_right = 5696.0
+offset_bottom = 1280.0
+
+[node name="bridge4" parent="." index="15" unique_id=1195466168 instance=ExtResource("2_kw38w")]
+offset_left = 5952.0
+offset_top = 64.0
+offset_right = 6656.0
+offset_bottom = 1280.0

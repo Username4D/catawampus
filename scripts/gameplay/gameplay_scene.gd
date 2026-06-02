@@ -1,8 +1,8 @@
 extends Node2D
 
-const level_amount = 2
+const level_amount = 10
 
-var bot_names = ["Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer"]
+var bot_names = ["Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer", "Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer"]
 
 func _physics_process(delta: float) -> void:
 	$Camera.position = $player.position + Vector2($player.speed * delta * 18 ,$player.velocity.y * delta * 18) 

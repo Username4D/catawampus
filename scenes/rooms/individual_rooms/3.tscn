@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bcaiah1h8wrsd"]
+
+[ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_bpaf5"]
+[ext_resource type="PackedScene" uid="uid://cmxc3ugrdtk60" path="res://scenes/objects/float_boost.tscn" id="2_b31kd"]
+[ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="3_1o712"]
+[ext_resource type="Resource" uid="uid://c47h4kexi1y5h" path="res://resources/bot_macros/3/export_macro (3).tres" id="3_vi2v0"]
+[ext_resource type="PackedScene" uid="uid://cl5vpeai2y225" path="res://scenes/objects/dash_orb.tscn" id="4_a137k"]
+[ext_resource type="Resource" uid="uid://cn1f66jtao7jx" path="res://resources/bot_macros/3/export_macro (4).tres" id="4_agqvi"]
+[ext_resource type="Resource" uid="uid://dj2hqjxljw0jy" path="res://resources/bot_macros/3/export_macro (5).tres" id="5_ggf4r"]
+[ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_itrqb"]
+[ext_resource type="Resource" uid="uid://bk6hfxaq5j3be" path="res://resources/bot_macros/3/export_macro.tres" id="6_d8wf3"]
+[ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="6_k34ny"]
+
+[node name="level_part" unique_id=1643637355 instance=ExtResource("1_bpaf5")]
+
+[node name="end" parent="." index="1" unique_id=2020603390]
+offset_left = 6784.0
+offset_top = -64.0
+offset_right = 7552.0
+offset_bottom = 1280.0
+
+[node name="checkpoint" parent="." index="2" unique_id=136548088]
+input_chains = Array[Resource]([ExtResource("6_d8wf3"), ExtResource("3_vi2v0"), ExtResource("4_agqvi"), ExtResource("5_ggf4r")])
+
+[node name="float_boost" parent="." index="3" unique_id=1997432394 instance=ExtResource("2_b31kd")]
+position = Vector2(1504, -160)
+
+[node name="float_boost2" parent="." index="4" unique_id=184198805 instance=ExtResource("2_b31kd")]
+position = Vector2(1440, -160)
+
+[node name="float_boost3" parent="." index="5" unique_id=1523566455 instance=ExtResource("2_b31kd")]
+position = Vector2(1376, -160)
+
+[node name="float_boost4" parent="." index="6" unique_id=103752944 instance=ExtResource("2_b31kd")]
+position = Vector2(1312, -160)
+
+[node name="NinePatchRect" parent="." index="7" unique_id=213439993 instance=ExtResource("3_1o712")]
+offset_left = 2496.0
+offset_top = -192.0
+offset_right = 4096.0
+offset_bottom = 992.0
+
+[node name="dash_orb" parent="." index="8" unique_id=1484280067 instance=ExtResource("4_a137k")]
+position = Vector2(1952, -352)
+
+[node name="spike" parent="." index="9" unique_id=395264293 instance=ExtResource("5_itrqb")]
+position = Vector2(3296, -224)
+
+[node name="spike2" parent="." index="10" unique_id=517354965 instance=ExtResource("5_itrqb")]
+position = Vector2(3360, -224)
+
+[node name="spike3" parent="." index="11" unique_id=88021844 instance=ExtResource("5_itrqb")]
+position = Vector2(3424, -224)
+
+[node name="spike4" parent="." index="12" unique_id=917222432 instance=ExtResource("5_itrqb")]
+position = Vector2(3488, -224)
+
+[node name="spike5" parent="." index="13" unique_id=368321988 instance=ExtResource("5_itrqb")]
+position = Vector2(3552, -224)
+
+[node name="bridge" parent="." index="14" unique_id=267162614 instance=ExtResource("6_k34ny")]
+offset_left = 4736.0
+offset_top = -64.0
+offset_right = 5632.0
+offset_bottom = 1088.0
+
+[node name="bridge2" parent="." index="15" unique_id=206636831 instance=ExtResource("6_k34ny")]
+offset_left = 5888.0
+offset_top = -192.0
+offset_right = 6400.0
+offset_bottom = 1152.0
+
+[node name="spike6" parent="." index="16" unique_id=2110566555 instance=ExtResource("5_itrqb")]
+position = Vector2(5600, -96)
+
+[node name="spike7" parent="." index="17" unique_id=1854974001 instance=ExtResource("5_itrqb")]
+position = Vector2(5536, -96)
+
+[node name="spike8" parent="." index="18" unique_id=1759495601 instance=ExtResource("5_itrqb")]
+position = Vector2(6368, -224)
+
+[node name="spike9" parent="." index="19" unique_id=1423911189 instance=ExtResource("5_itrqb")]
+position = Vector2(1504, -32)

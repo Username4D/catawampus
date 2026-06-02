@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="BotMacro" format=3 uid="uid://cr7q2rkqjiapk"]
+
+[ext_resource type="Script" uid="uid://droqrckv2bcbj" path="res://scripts/bot_system/bot_input_action.gd" id="1_qfey4"]
+[ext_resource type="Script" uid="uid://bly23fvrye5" path="res://scripts/bot_system/bot_macro.gd" id="2_evft1"]
+
+[sub_resource type="Resource" id="Resource_lojpl"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 1.0333333333333343
+
+[sub_resource type="Resource" id="Resource_j531n"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 1.3000000000000005
+
+[sub_resource type="Resource" id="Resource_h58w4"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 2.666666666666662
+
+[sub_resource type="Resource" id="Resource_r8ojx"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 6.11666666666665
+
+[sub_resource type="Resource" id="Resource_syps8"]
+script = ExtResource("1_qfey4")
+type = 1
+action_name = "ui_accept"
+time_stamp = 7.666666666666645
+
+[sub_resource type="Resource" id="Resource_algc3"]
+script = ExtResource("1_qfey4")
+action_name = "ui_accept"
+time_stamp = 8.149999999999984
+
+[resource]
+script = ExtResource("2_evft1")
+input_chain = [SubResource("Resource_lojpl"), SubResource("Resource_j531n"), SubResource("Resource_h58w4"), SubResource("Resource_r8ojx"), SubResource("Resource_syps8"), SubResource("Resource_algc3")]

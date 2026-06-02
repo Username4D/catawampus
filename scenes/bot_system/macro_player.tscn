@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://cobpr1uyxr6ht"]
 
 [ext_resource type="Script" uid="uid://bxw0x2irwwseu" path="res://scripts/bot_system/macro_player.gd" id="1_vta65"]
+[ext_resource type="PackedScene" uid="uid://c1u6c1nf1r2nd" path="res://scenes/rooms/individual_rooms/10.tscn" id="2_bkswt"]
 [ext_resource type="PackedScene" uid="uid://dgc36x7nxig8d" path="res://scenes/bot_system/bot.tscn" id="2_jtbs1"]
+[ext_resource type="Resource" path="res://resources/bot_macros/10/export_macro (5).tres" id="3_bkswt"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="3_ktgto"]
-[ext_resource type="PackedScene" uid="uid://cg8y1028y6p4v" path="res://scenes/rooms/individual_rooms/2.tscn" id="3_lca6j"]
-[ext_resource type="Resource" uid="uid://ds32llouy850q" path="res://resources/bot_macros/2/export_macro (4).tres" id="6_ic6kb"]
 [ext_resource type="TileSet" uid="uid://cq6vndlorddfu" path="res://resources/basic_tiles.tres" id="8_lca6j"]
 [ext_resource type="Script" uid="uid://duh6tiyqmsx74" path="res://scripts/objects/spike.gd" id="11_igsn5"]
 
@@ -13,8 +13,8 @@ size = Vector2(57280, 682)
 
 [node name="macro_player" type="Node2D" unique_id=291768999]
 script = ExtResource("1_vta65")
-rooms = Array[PackedScene]([ExtResource("3_lca6j")])
-macros = Array[Resource]([ExtResource("6_ic6kb")])
+rooms = Array[PackedScene]([ExtResource("2_bkswt")])
+macros = Array[Resource]([ExtResource("3_bkswt")])
 
 [node name="background_tilemap" type="TileMapLayer" parent="." unique_id=1940963484]
 self_modulate = Color(0.48235294, 0.9254902, 0.9607843, 1)

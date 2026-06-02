@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d1nuim4gbf7sd"]
+
+[ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_yoa55"]
+[ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="2_y1ekb"]
+[ext_resource type="Resource" uid="uid://1c88df2l1j8t" path="res://resources/bot_macros/5/export_macro (2).tres" id="3_thlm3"]
+[ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="3_y1ekb"]
+[ext_resource type="Resource" uid="uid://bi7ggey1c1xc6" path="res://resources/bot_macros/5/export_macro (4).tres" id="5_sfk7j"]
+[ext_resource type="Resource" uid="uid://cyv0r6pk1srsb" path="res://resources/bot_macros/5/export_macro (5).tres" id="6_2135r"]
+[ext_resource type="Resource" path="res://resources/bot_macros/5/export_macro.tres" id="6_thlm3"]
+
+[node name="level_part" unique_id=1643637355 instance=ExtResource("1_yoa55")]
+
+[node name="end" parent="." index="1" unique_id=2020603390]
+offset_left = 6720.0
+offset_right = 7488.0
+
+[node name="end2" parent="." index="2" unique_id=213439993 instance=ExtResource("2_y1ekb")]
+offset_left = 2368.0
+offset_right = 2624.0
+offset_bottom = 1344.0
+
+[node name="end3" parent="." index="3" unique_id=2101854479 instance=ExtResource("2_y1ekb")]
+offset_left = 3456.0
+offset_right = 3712.0
+offset_bottom = 1344.0
+
+[node name="end4" parent="." index="4" unique_id=881824641 instance=ExtResource("2_y1ekb")]
+offset_left = 4608.0
+offset_top = 128.0
+offset_right = 4864.0
+offset_bottom = 1472.0
+
+[node name="end5" parent="." index="5" unique_id=1786088822 instance=ExtResource("2_y1ekb")]
+offset_left = 5696.0
+offset_top = 64.0
+offset_right = 5952.0
+offset_bottom = 1408.0
+
+[node name="checkpoint" parent="." index="6" unique_id=136548088]
+input_chains = Array[Resource]([ExtResource("3_thlm3"), ExtResource("5_sfk7j"), ExtResource("6_2135r"), ExtResource("6_thlm3")])
+
+[node name="spike" parent="." index="7" unique_id=395264293 instance=ExtResource("3_y1ekb")]
+position = Vector2(4128, -96)
+
+[node name="spike2" parent="." index="8" unique_id=1602710536 instance=ExtResource("3_y1ekb")]
+position = Vector2(4128, -32)
+rotation = 3.1415927
+
+[node name="spike3" parent="." index="9" unique_id=447733091 instance=ExtResource("3_y1ekb")]
+position = Vector2(5280, 32)
+
+[node name="spike4" parent="." index="10" unique_id=1684008372 instance=ExtResource("3_y1ekb")]
+position = Vector2(5280, 96)
+rotation = 3.1415927

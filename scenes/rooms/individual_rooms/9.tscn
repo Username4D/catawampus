@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bylxo4whgwu8x"]
+
+[ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_bn55x"]
+[ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="2_a16pf"]
+[ext_resource type="Resource" uid="uid://b5p5wjgejxh75" path="res://resources/bot_macros/9/export_macro.tres" id="2_tih3s"]
+[ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="3_c8el7"]
+[ext_resource type="Resource" uid="uid://delt1a2dgejyw" path="res://resources/bot_macros/9/export_macro (2).tres" id="3_xkfw8"]
+[ext_resource type="Resource" uid="uid://bs3fwhenmww33" path="res://resources/bot_macros/9/export_macro (3).tres" id="4_68owu"]
+[ext_resource type="Resource" uid="uid://c7glr5b1b6a11" path="res://resources/bot_macros/9/export_macro (4).tres" id="5_ilwap"]
+[ext_resource type="Resource" uid="uid://c0uphn2f6pcht" path="res://resources/bot_macros/9/export_macro (5).tres" id="6_kxvu1"]
+
+[node name="9" unique_id=1643637355 instance=ExtResource("1_bn55x")]
+
+[node name="end" parent="." index="1" unique_id=2020603390]
+offset_left = 7168.0
+offset_right = 7936.0
+
+[node name="checkpoint" parent="." index="2" unique_id=136548088]
+input_chains = Array[Resource]([ExtResource("2_tih3s"), ExtResource("3_xkfw8"), ExtResource("4_68owu"), ExtResource("5_ilwap"), ExtResource("6_kxvu1")])
+
+[node name="bridge" parent="." index="3" unique_id=213439993 instance=ExtResource("2_a16pf")]
+offset_left = 2048.0
+offset_top = -128.0
+offset_right = 4544.0
+offset_bottom = 1792.0
+
+[node name="bridge2" parent="." index="4" unique_id=1890936547 instance=ExtResource("2_a16pf")]
+offset_left = 4864.0
+offset_top = -256.0
+offset_right = 5376.0
+offset_bottom = 1664.0
+
+[node name="bridge3" parent="." index="5" unique_id=1961567499 instance=ExtResource("2_a16pf")]
+offset_left = 5632.0
+offset_right = 6656.0
+offset_bottom = 1920.0
+
+[node name="spike" parent="." index="6" unique_id=395264293 instance=ExtResource("3_c8el7")]
+position = Vector2(2592, -160)
+
+[node name="spike2" parent="." index="7" unique_id=1960484421 instance=ExtResource("3_c8el7")]
+position = Vector2(2656, -160)
+
+[node name="spike3" parent="." index="8" unique_id=212028976 instance=ExtResource("3_c8el7")]
+position = Vector2(2720, -160)
+
+[node name="spike4" parent="." index="9" unique_id=85230961 instance=ExtResource("3_c8el7")]
+position = Vector2(2784, -160)
+
+[node name="spike5" parent="." index="10" unique_id=328832498 instance=ExtResource("3_c8el7")]
+position = Vector2(2848, -160)
+
+[node name="spike6" parent="." index="11" unique_id=335739692 instance=ExtResource("3_c8el7")]
+position = Vector2(2912, -160)
+
+[node name="spike7" parent="." index="12" unique_id=789074789 instance=ExtResource("3_c8el7")]
+position = Vector2(2976, -160)
+
+[node name="spike8" parent="." index="13" unique_id=674907098 instance=ExtResource("3_c8el7")]
+position = Vector2(3616, -160)
+
+[node name="spike9" parent="." index="14" unique_id=927810185 instance=ExtResource("3_c8el7")]
+position = Vector2(3680, -160)
+
+[node name="spike10" parent="." index="15" unique_id=1716107210 instance=ExtResource("3_c8el7")]
+position = Vector2(3744, -160)
+
+[node name="spike11" parent="." index="16" unique_id=91300515 instance=ExtResource("3_c8el7")]
+position = Vector2(3808, -160)
+
+[node name="spike12" parent="." index="17" unique_id=107966101 instance=ExtResource("3_c8el7")]
+position = Vector2(3872, -160)
+
+[node name="spike13" parent="." index="18" unique_id=365361122 instance=ExtResource("3_c8el7")]
+position = Vector2(3936, -160)
+
+[node name="spike14" parent="." index="19" unique_id=1570977732 instance=ExtResource("3_c8el7")]
+position = Vector2(4000, -160)
+
+[node name="spike15" parent="." index="20" unique_id=1738639572 instance=ExtResource("3_c8el7")]
+position = Vector2(6624, -32)
+
+[node name="spike16" parent="." index="21" unique_id=2001982605 instance=ExtResource("3_c8el7")]
+position = Vector2(6432, -32)
+
+[node name="spike17" parent="." index="22" unique_id=938097044 instance=ExtResource("3_c8el7")]
+position = Vector2(6496, -32)
+
+[node name="spike18" parent="." index="23" unique_id=1416434958 instance=ExtResource("3_c8el7")]
+position = Vector2(6560, -32)

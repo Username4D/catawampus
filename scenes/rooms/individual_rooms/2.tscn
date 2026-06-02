@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_rfocn"]
 [ext_resource type="Resource" uid="uid://dwaticacw5bv3" path="res://resources/bot_macros/2/export_macro (2).tres" id="6_6r5ko"]
 [ext_resource type="Resource" uid="uid://b8pyardkh0vtg" path="res://resources/bot_macros/2/export_macro (3).tres" id="7_rfocn"]
-[ext_resource type="Resource" uid="uid://pc7xem3jhy5g" path="res://resources/bot_macros/2/export_macro (5).tres" id="9_552n5"]
 
 [node name="level_part" unique_id=1643637355 instance=ExtResource("1_vfgtt")]
 
@@ -43,4 +42,4 @@ offset_bottom = 608.0
 position = Vector2(1504, -32)
 
 [node name="checkpoint" parent="." index="9" unique_id=136548088]
-input_chains = Array[Resource]([ExtResource("5_cjx5k"), ExtResource("6_6r5ko"), ExtResource("7_rfocn"), ExtResource("9_552n5")])
+input_chains = Array[Resource]([ExtResource("5_cjx5k"), ExtResource("6_6r5ko"), ExtResource("7_rfocn")])

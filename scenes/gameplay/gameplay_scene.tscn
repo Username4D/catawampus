@@ -41,6 +41,15 @@ position = Vector2(-576, 384)
 [node name="bot4" parent="bots" unique_id=458928492 instance=ExtResource("6_va0mq")]
 position = Vector2(-576, 384)
 
+[node name="bot5" parent="bots" unique_id=302997714 instance=ExtResource("6_va0mq")]
+position = Vector2(-576, 384)
+
+[node name="bot6" parent="bots" unique_id=1315804930 instance=ExtResource("6_va0mq")]
+position = Vector2(-576, 384)
+
+[node name="bot7" parent="bots" unique_id=1719329646 instance=ExtResource("6_va0mq")]
+position = Vector2(-576, 384)
+
 [node name="rooms" type="Node2D" parent="." unique_id=1106676845]
 
 [node name="NinePatchRect" parent="." unique_id=213439993 instance=ExtResource("5_q0vbh")]

@@ -9,6 +9,7 @@ radius = 32.0
 [sub_resource type="AtlasTexture" id="AtlasTexture_5cuac"]
 atlas = ExtResource("2_av48n")
 region = Rect2(256, 0, 128, 128)
+filter_clip = true
 
 [node name="saw" type="Area2D" unique_id=1926946074]
 collision_layer = 7

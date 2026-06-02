@@ -24,6 +24,7 @@ signal death
 @export var progress = 0
 
 func _ready() -> void:
+	await get_tree().create_timer(randf_range(0, 0.4)).timeout
 	input.press("ui_accept")
 
 func _physics_process(delta: float) -> void:

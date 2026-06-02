@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c1u6c1nf1r2nd"]
+
+[ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_ix0rc"]
+[ext_resource type="Resource" uid="uid://bem5oghchw3go" path="res://resources/bot_macros/10/export_macro.tres" id="2_057ff"]
+[ext_resource type="PackedScene" uid="uid://cl5vpeai2y225" path="res://scenes/objects/dash_orb.tscn" id="2_affel"]
+[ext_resource type="Resource" uid="uid://bkginihb7ma86" path="res://resources/bot_macros/10/export_macro (2).tres" id="3_34tew"]
+[ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="3_76l7b"]
+[ext_resource type="PackedScene" uid="uid://bodo6c560xmkq" path="res://scenes/objects/saw.tscn" id="4_iy1vq"]
+[ext_resource type="Resource" uid="uid://d3qxuqceo4mp1" path="res://resources/bot_macros/10/export_macro (3).tres" id="4_ngieb"]
+[ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_affel"]
+[ext_resource type="Resource" uid="uid://i38ei8bcnovd" path="res://resources/bot_macros/10/export_macro (4).tres" id="5_jns7d"]
+[ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="6_76l7b"]
+[ext_resource type="Resource" uid="uid://bh6ik6ex2p7ef" path="res://resources/bot_macros/10/export_macro (5).tres" id="6_c5lb3"]
+
+[node name="level_part" unique_id=1643637355 instance=ExtResource("1_ix0rc")]
+
+[node name="end" parent="." index="1" unique_id=2020603390]
+offset_left = 7680.0
+offset_right = 8448.0
+
+[node name="checkpoint" parent="." index="2" unique_id=136548088]
+input_chains = Array[Resource]([ExtResource("2_057ff"), ExtResource("3_34tew"), ExtResource("4_ngieb"), ExtResource("5_jns7d"), ExtResource("6_c5lb3")])
+
+[node name="dash_orb" parent="." index="3" unique_id=1484280067 instance=ExtResource("2_affel")]
+position = Vector2(1504, -32)
+
+[node name="NinePatchRect" parent="." index="4" unique_id=213439993 instance=ExtResource("3_76l7b")]
+offset_left = 2176.0
+offset_top = 64.0
+offset_right = 2976.0
+offset_bottom = 928.0
+
+[node name="NinePatchRect2" parent="." index="5" unique_id=993756509 instance=ExtResource("3_76l7b")]
+offset_left = 3456.0
+offset_right = 4608.0
+offset_bottom = 864.0
+
+[node name="NinePatchRect3" parent="." index="6" unique_id=1679661073 instance=ExtResource("3_76l7b")]
+offset_left = 4864.0
+offset_top = 96.0
+offset_right = 6016.0
+offset_bottom = 960.0
+
+[node name="saw" parent="." index="7" unique_id=1926946074 instance=ExtResource("4_iy1vq")]
+position = Vector2(1504, -160)
+
+[node name="spike" parent="." index="8" unique_id=395264293 instance=ExtResource("5_affel")]
+position = Vector2(3488, -32)
+
+[node name="spike2" parent="." index="9" unique_id=769357319 instance=ExtResource("5_affel")]
+position = Vector2(4576, -32)
+
+[node name="spike3" parent="." index="10" unique_id=2101902097 instance=ExtResource("5_affel")]
+position = Vector2(4512, -32)
+
+[node name="spike4" parent="." index="11" unique_id=1075328346 instance=ExtResource("5_affel")]
+position = Vector2(4448, -32)
+
+[node name="spike5" parent="." index="12" unique_id=779669898 instance=ExtResource("5_affel")]
+position = Vector2(4896, 64)
+
+[node name="bridge" parent="." index="13" unique_id=396345329 instance=ExtResource("6_76l7b")]
+offset_left = 6400.0
+offset_right = 6912.0
+offset_bottom = 1024.0
