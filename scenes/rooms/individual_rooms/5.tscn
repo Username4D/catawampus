@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="3_y1ekb"]
 [ext_resource type="Resource" uid="uid://bi7ggey1c1xc6" path="res://resources/bot_macros/5/export_macro (4).tres" id="5_sfk7j"]
 [ext_resource type="Resource" uid="uid://cyv0r6pk1srsb" path="res://resources/bot_macros/5/export_macro (5).tres" id="6_2135r"]
-[ext_resource type="Resource" path="res://resources/bot_macros/5/export_macro.tres" id="6_thlm3"]
+[ext_resource type="Resource" uid="uid://drdfiyrp27yc6" path="res://resources/bot_macros/5/export_macro.tres" id="6_thlm3"]
 
 [node name="level_part" unique_id=1643637355 instance=ExtResource("1_yoa55")]
 
 [node name="end" parent="." index="1" unique_id=2020603390]
-offset_left = 6720.0
+offset_left = 6688.0
 offset_right = 7488.0
 
 [node name="end2" parent="." index="2" unique_id=213439993 instance=ExtResource("2_y1ekb")]
@@ -31,7 +31,7 @@ offset_right = 4864.0
 offset_bottom = 1472.0
 
 [node name="end5" parent="." index="5" unique_id=1786088822 instance=ExtResource("2_y1ekb")]
-offset_left = 5696.0
+offset_left = 5664.0
 offset_top = 64.0
 offset_right = 5952.0
 offset_bottom = 1408.0

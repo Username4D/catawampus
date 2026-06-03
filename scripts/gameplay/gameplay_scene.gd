@@ -3,6 +3,7 @@ extends Node2D
 const level_amount = 10
 
 var bot_names = ["Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer", "Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer"]
+@onready var leader_board = $bots.get_children() + [$player]
 
 func _physics_process(delta: float) -> void:
 	$Camera.position = $player.position + Vector2($player.speed * delta * 18 ,$player.velocity.y * delta * 18) 
@@ -17,6 +18,7 @@ func _ready() -> void:
 		var new_name = bot_names[randi_range(0, len(bot_names) - 1  )]
 		i.name = new_name
 		bot_names.erase(new_name)
+	update_leader_board()
 	var next_level_position: Vector2 = Vector2(0, 416)
 	for i in range(0, 5):
 		var scene = load("res://scenes/rooms/individual_rooms/%d.tscn" % randi_range(1, level_amount)).instantiate()
@@ -25,8 +27,16 @@ func _ready() -> void:
 		await get_tree().process_frame
 		next_level_position = scene.next_room_position
 	$player.max_x = next_level_position.x
+	for i in $bots.get_children():
+		i.max_x = next_level_position.x
 	var scene = load("res://scenes/rooms/end_part.tscn").instantiate()
 	scene.position = next_level_position
 	$rooms.add_child(scene)
 	await get_tree().process_frame
 	next_level_position = scene.next_room_position
+
+func update_leader_board():
+	leader_board.sort_custom(func(a, b): return a.progress > b.progress)
+	
+	$player.ui_leaderboard = leader_board
+	get_tree().create_timer(0.25).timeout.connect(update_leader_board)

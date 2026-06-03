@@ -18,6 +18,8 @@ enum states {ALIVE, DEAD, FINISHED}
 signal checkpoint_collected(pos: Vector2)
 signal death
 
+@export var ui_leaderboard = []
+
 func _ready() -> void:
 	pass
 

@@ -4,7 +4,6 @@
 [ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="2_71udy"]
 [ext_resource type="Script" uid="uid://covvjugfagkq0" path="res://scripts/player/ui/ui.gd" id="2_nxxqb"]
 [ext_resource type="Texture2D" uid="uid://cvgwn4ww62anw" path="res://assets/button_pause.svg" id="4_7evk0"]
-[ext_resource type="PackedScene" uid="uid://ugflqp07xto7" path="res://scenes/player/ui/leaderboard_part.tscn" id="5_8bnda"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_71udy"]
 font_size = 19
@@ -48,26 +47,10 @@ icon = ExtResource("4_7evk0")
 icon_alignment = 1
 expand_icon = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ui" index="2" unique_id=1730055848]
+[node name="leaderboard" type="Control" parent="ui" index="2" unique_id=1291509971]
+layout_mode = 3
+anchors_preset = 0
 offset_left = 896.0
 offset_top = 32.0
-offset_right = 1120.0
-offset_bottom = 64.0
-
-[node name="leaderboard_part" parent="ui/VBoxContainer" index="0" unique_id=1217596780 instance=ExtResource("5_8bnda")]
-layout_mode = 2
-
-[node name="leaderboard_part2" parent="ui/VBoxContainer" index="1" unique_id=874084166 instance=ExtResource("5_8bnda")]
-layout_mode = 2
-is_highlighted = false
-text = "Bot1"
-
-[node name="leaderboard_part3" parent="ui/VBoxContainer" index="2" unique_id=201600517 instance=ExtResource("5_8bnda")]
-layout_mode = 2
-is_highlighted = false
-text = "Bot2"
-
-[node name="leaderboard_part4" parent="ui/VBoxContainer" index="3" unique_id=1562604 instance=ExtResource("5_8bnda")]
-layout_mode = 2
-is_highlighted = false
-text = "Bot3"
+offset_right = 1104.0
+offset_bottom = 172.0

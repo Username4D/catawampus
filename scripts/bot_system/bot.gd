@@ -77,4 +77,3 @@ func _on_death() -> void:
 func _on_checkpoint_collected(pos: Vector2, input_chain: Array) -> void:
 	last_checkpoint_position = pos
 	input.parse_input_chain(input_chain)
-	print([self.acceleration, speed, jump_strength, has_accelerated])

@@ -2,6 +2,7 @@ extends Control
 
 @export var is_highlighted: bool = false
 @export var text: String = ""
+@export var object: Node
 
 func _ready() -> void:
 	$Label.text = text

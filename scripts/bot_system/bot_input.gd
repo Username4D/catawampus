@@ -36,7 +36,6 @@ func is_action_just_released(input: String) -> bool:
 
 func parse_input_chain(input_chain: Array):
 	if parse_in_progress: return
-	print("begin_parse")
 	parse_in_progress = true
 	var timer: SceneTreeTimer = Engine.get_main_loop().create_timer(input_chain[-1].time_stamp, true)
 	

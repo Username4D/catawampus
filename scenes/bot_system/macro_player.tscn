@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cobpr1uyxr6ht"]
 
 [ext_resource type="Script" uid="uid://bxw0x2irwwseu" path="res://scripts/bot_system/macro_player.gd" id="1_vta65"]
-[ext_resource type="PackedScene" uid="uid://c1u6c1nf1r2nd" path="res://scenes/rooms/individual_rooms/10.tscn" id="2_bkswt"]
+[ext_resource type="PackedScene" uid="uid://d1nuim4gbf7sd" path="res://scenes/rooms/individual_rooms/5.tscn" id="2_bkswt"]
 [ext_resource type="PackedScene" uid="uid://dgc36x7nxig8d" path="res://scenes/bot_system/bot.tscn" id="2_jtbs1"]
-[ext_resource type="Resource" path="res://resources/bot_macros/10/export_macro (5).tres" id="3_bkswt"]
+[ext_resource type="Resource" uid="uid://cyv0r6pk1srsb" path="res://resources/bot_macros/5/export_macro (5).tres" id="3_bkswt"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="3_ktgto"]
 [ext_resource type="TileSet" uid="uid://cq6vndlorddfu" path="res://resources/basic_tiles.tres" id="8_lca6j"]
 [ext_resource type="Script" uid="uid://duh6tiyqmsx74" path="res://scripts/objects/spike.gd" id="11_igsn5"]
