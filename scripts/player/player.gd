@@ -10,11 +10,11 @@ var friction = 800
 var jump_strength_load_speed = 6000
 var air_resistance = 100
 var last_checkpoint_position = Vector2.ZERO
-var state = states.ALIVE
+@export var state = states.ALIVE
 
 @export var max_x = 0
 @export var progress = 0
-enum states {ALIVE, DEAD, FINISHED}
+enum states {ALIVE, DEAD, FINISHED, NOTSTARTED}
 signal checkpoint_collected(pos: Vector2)
 signal death
 
@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = speed
 		velocity.y += get_gravity().y * delta
 		move_and_slide()
-	elif state == states.FINISHED:
+	elif state == states.FINISHED or state == states.NOTSTARTED:
 		if is_on_floor():
 			speed = move_toward(speed, 0, friction * delta)
 		elif velocity.y < 0:

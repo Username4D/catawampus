@@ -24,7 +24,9 @@ signal death
 @export var progress = 0
 
 func _ready() -> void:
-	await get_tree().create_timer(randf_range(0, 0.4)).timeout
+	$randomization_timer.wait_time = randf_range(0.2, 0.6)
+	$randomization_timer.start()
+	await $randomization_timer.timeout
 	input.press("ui_accept")
 
 func _physics_process(delta: float) -> void:

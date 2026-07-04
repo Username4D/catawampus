@@ -1,0 +1,301 @@
+[gd_scene format=3 uid="uid://bnp6px7iym0ex"]
+
+[ext_resource type="Script" uid="uid://cgkxm34ivajqm" path="res://scripts/ui_elements/timer.gd" id="1_j1uxf"]
+[ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="1_wscui"]
+
+[sub_resource type="Animation" id="Animation_j1uxf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("display_1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("display_1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.7853982, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("display_3:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("display_3:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("display_3:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.7853982, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("display_2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.7853982, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("display_2:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("display_2:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_jbtib"]
+resource_name = "timer"
+length = 3.0
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("display_1:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 2.75, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(2, 2), Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("display_1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.7853982, -0.25, 0, 0.25, 0, 0, -0.125, -0.1308997, 0, 0, 0.34906584, -0.041666668, -0.058177643, 0, 0),
+"times": PackedFloat32Array(0, 2.75, 3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("display_3:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 2, -0.125, 0, 0.041666668, 0, 1e-05, -0.041666668, 0.166665, 0, 0),
+"times": PackedFloat32Array(0, 0.75, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("display_3:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 2, -0.125, 0, 0.041666668, 0, 1e-05, -0.041666668, 0.166665, 0, 0),
+"times": PackedFloat32Array(0, 0.75, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("display_3:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.7853982, -0.25, 0, 0.25, 0, 0, -0.125, -0.1308997, 0, 0, 0.34906584, -0.041666668, -0.058177643, 0, 0),
+"times": PackedFloat32Array(0, 0.75, 1)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("display_2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.7853982, -0.25, 0, 0.25, 0, 0, -0.125, -0.1308997, 0, 0, 0.34906584, -0.041666668, -0.058177643, 0, 0),
+"times": PackedFloat32Array(1, 1.75, 2)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("display_2:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 2, -0.125, 0, 0.041666668, 0, 1e-05, -0.041666668, 0.166665, 0, 0),
+"times": PackedFloat32Array(1, 1.75, 2)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("display_2:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 2, -0.125, 0, 0.041666668, 0, 1e-05, -0.041666668, 0.166665, 0, 0),
+"times": PackedFloat32Array(1, 1.75, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2ltxu"]
+_data = {
+&"RESET": SubResource("Animation_j1uxf"),
+&"timer": SubResource("Animation_jbtib")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_8vf42"]
+font = ExtResource("1_wscui")
+font_size = 41
+outline_size = 32
+outline_color = Color(1, 1, 1, 0.16470589)
+
+[node name="timer" type="Control" unique_id=1980934241]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_right = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1uxf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=964779316]
+libraries/ = SubResource("AnimationLibrary_2ltxu")
+autoplay = &"timer"
+
+[node name="display_1" type="Control" parent="." unique_id=724110831]
+anchors_preset = 0
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 704.0
+offset_bottom = 384.0
+rotation = -0.7853982
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(64, 64)
+
+[node name="ColorRect" type="ColorRect" parent="display_1" unique_id=523400909]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+rotation = -0.2617994
+scale = Vector2(0.67, 0.67)
+pivot_offset = Vector2(64, 64)
+color = Color(0.35000002, 0.39333332, 1, 1)
+
+[node name="Label" type="Label" parent="display_1" unique_id=1293247038]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+text = "1"
+label_settings = SubResource("LabelSettings_8vf42")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="display_2" type="Control" parent="." unique_id=1476445892]
+anchors_preset = 0
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 704.0
+offset_bottom = 384.0
+rotation = -0.7853982
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(64, 64)
+
+[node name="ColorRect" type="ColorRect" parent="display_2" unique_id=1728788447]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+rotation = -0.2617994
+scale = Vector2(0.67, 0.67)
+pivot_offset = Vector2(64, 64)
+color = Color(0.18218717, 0.2509729, 1, 1)
+
+[node name="Label" type="Label" parent="display_2" unique_id=1276632779]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+text = "2"
+label_settings = SubResource("LabelSettings_8vf42")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="display_3" type="Control" parent="." unique_id=1316331455]
+anchors_preset = 0
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 704.0
+offset_bottom = 384.0
+rotation = -0.7853982
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(64, 64)
+
+[node name="ColorRect" type="ColorRect" parent="display_3" unique_id=1210020857]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+rotation = -0.2617994
+scale = Vector2(0.67, 0.67)
+pivot_offset = Vector2(64, 64)
+color = Color(0, 0.12999988, 0.78, 1)
+
+[node name="Label" type="Label" parent="display_3" unique_id=550514263]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+text = "3"
+label_settings = SubResource("LabelSettings_8vf42")
+horizontal_alignment = 1
+vertical_alignment = 1

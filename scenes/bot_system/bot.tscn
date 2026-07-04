@@ -10,3 +10,5 @@ script = ExtResource("2_y56si")
 
 [node name="MeshInstance2D" parent="." index="1" unique_id=1784343318]
 self_modulate = Color(0.4509804, 0.5137255, 0.58431375, 0.45490196)
+
+[node name="randomization_timer" type="Timer" parent="." index="2" unique_id=868657504]

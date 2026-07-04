@@ -20,8 +20,10 @@ func _physics_process(delta: float) -> void:
 	
 
 func _ready() -> void:
+	$bots.process_mode = Node.PROCESS_MODE_DISABLED
 	$Camera.make_current()
 	$player.zoom = Vector2(2, 2)
+	%timer.timer_finished.connect(timer_timeout)
 	for i in $bots.get_children():
 		var new_name = bot_names[randi_range(0, len(bot_names) - 1  )]
 		i.name = new_name
@@ -48,3 +50,9 @@ func update_leader_board():
 	
 	$player.ui_leaderboard = leader_board
 	get_tree().create_timer(0.25).timeout.connect(update_leader_board)
+
+func timer_timeout():
+	state = 'gameplay'
+	$bots.process_mode = Node.PROCESS_MODE_INHERIT
+	print('start')
+	$player.state = $player.states.ALIVE

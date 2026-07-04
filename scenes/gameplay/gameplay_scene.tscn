@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="5_q0vbh"]
 [ext_resource type="PackedScene" uid="uid://d4mt06drxisof" path="res://scenes/player/human_player.tscn" id="6_rfdso"]
 [ext_resource type="PackedScene" uid="uid://dgc36x7nxig8d" path="res://scenes/bot_system/bot.tscn" id="6_va0mq"]
+[ext_resource type="PackedScene" uid="uid://bnp6px7iym0ex" path="res://scenes/ui_elements/timer.tscn" id="7_rfdso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0vbh"]
 size = Vector2(57280, 682)
@@ -62,6 +63,7 @@ offset_bottom = 768.0
 
 [node name="player" parent="." unique_id=46389491 instance=ExtResource("6_rfdso")]
 position = Vector2(-576, 392)
+state = 3
 
 [node name="void" type="Area2D" parent="." unique_id=1874620379]
 collision_layer = 7
@@ -121,5 +123,10 @@ offset_top = 960.0
 offset_right = 1696.0
 offset_bottom = 992.0
 color = Color(0, 0, 0, 1)
+
+[node name="timer_layer" type="CanvasLayer" parent="." unique_id=88921617]
+
+[node name="timer" parent="timer_layer" unique_id=1980934241 instance=ExtResource("7_rfdso")]
+unique_name_in_owner = true
 
 [connection signal="body_entered" from="void" to="void" method="_on_body_entered"]
