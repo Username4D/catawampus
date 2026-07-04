@@ -3,10 +3,12 @@ extends CanvasLayer
 var leaderboard_part_scene = preload("res://scenes/player/ui/leaderboard_part.tscn")
 
 func _process(delta: float) -> void:
-	$level_progress.value = clamp(self.get_parent().position.x / self.get_parent().max_x / 0.01, 0, 100)
-	$level_progress/percentage_label.text = str(int($level_progress.value)) + "%"
+	%level_progress.value = clamp(self.get_parent().position.x / self.get_parent().max_x / 0.01, 0, 100)
+	%level_progress/percentage_label.text = str(int(%level_progress.value)) + "%"
 	
-	for i in $leaderboard.get_children():
+	$zoom_layer.scale = self.get_parent().zoom
+	
+	for i in %leaderboard.get_children():
 		i.position.y = move_toward(i.position.y, self.get_parent().ui_leaderboard.find(i.object) * 40, delta * 250)
 func _ready() -> void:
 	await get_tree().process_frame
@@ -17,4 +19,4 @@ func _ready() -> void:
 		new.object = self.get_parent().ui_leaderboard[i]
 		if new.object.is_in_group("bot"): new.is_highlighted = false
 		new.text = new.name
-		$leaderboard.add_child(new)
+		%leaderboard.add_child(new)

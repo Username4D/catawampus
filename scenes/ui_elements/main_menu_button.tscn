@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://y320gdxkaw4p"]
+
+[ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="1_n7vgc"]
+[ext_resource type="Script" uid="uid://cppgf23btey0v" path="res://scripts/ui_elements/main_menu_button.gd" id="2_qtqff"]
+[ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="3_wx8s7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cmbnp"]
+font = ExtResource("3_wx8s7")
+font_size = 29
+
+[node name="main_menu_button" type="Button" unique_id=289617049]
+custom_minimum_size = Vector2(0, 64)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n7vgc")
+script = ExtResource("2_qtqff")
+
+[node name="Label" type="Label" parent="." unique_id=1410313544]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PText"
+label_settings = SubResource("LabelSettings_cmbnp")
+horizontal_alignment = 1
+vertical_alignment = 1
