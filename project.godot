@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="catawampus"
-run/main_scene="uid://bualteg8q0dkr"
+run/main_scene="uid://817ttg748dws"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
+
+[autoload]
+
+global_node_handler="*uid://byyxl47ctck0w"
 
 [editor_plugins]
 

@@ -7,7 +7,6 @@ func _process(delta: float) -> void:
 	%level_progress/percentage_label.text = str(int(%level_progress.value)) + "%"
 	
 	$zoom_layer.scale = self.get_parent().zoom
-	
 	for i in %leaderboard.get_children():
 		i.position.y = move_toward(i.position.y, self.get_parent().ui_leaderboard.find(i.object) * 40, delta * 250)
 func _ready() -> void:
@@ -20,3 +19,11 @@ func _ready() -> void:
 		if new.object.is_in_group("bot"): new.is_highlighted = false
 		new.text = new.name
 		%leaderboard.add_child(new)
+
+func show_winscreen():
+	await get_tree().create_timer(1).timeout
+	$zoom_layer/win_screen.lb_position = self.get_parent().ui_leaderboard.find(self.get_parent()) + 1
+	$zoom_layer/leaderboard.position = Vector2(456, 208)
+	$zoom_layer/win_screen.visible = true
+	$zoom_layer/level_progress.visible = false
+	$zoom_layer/pause_button.visible = false

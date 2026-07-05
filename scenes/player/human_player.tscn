@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="2_71udy"]
 [ext_resource type="Script" uid="uid://covvjugfagkq0" path="res://scripts/player/ui/ui.gd" id="2_nxxqb"]
 [ext_resource type="Texture2D" uid="uid://cvgwn4ww62anw" path="res://assets/button_pause.svg" id="4_7evk0"]
+[ext_resource type="PackedScene" uid="uid://4cve3psslecs" path="res://scenes/ui_elements/win_screen.tscn" id="5_8bnda"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_71udy"]
 font_size = 19
@@ -65,3 +66,7 @@ offset_left = 896.0
 offset_top = 32.0
 offset_right = 1104.0
 offset_bottom = 172.0
+
+[node name="win_screen" parent="ui/zoom_layer" index="3" unique_id=424118579 instance=ExtResource("5_8bnda")]
+visible = false
+layout_mode = 1

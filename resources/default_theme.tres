@@ -1383,7 +1383,7 @@ content_margin_top = -1.0
 content_margin_right = -1.0
 content_margin_bottom = -1.0
 script = ExtResource("2_2pkyf")
-color = Color(1, 1, 1, 1)
+color = Color(0.5409904, 0.54099053, 0.5409904, 1)
 texture = SubResource("GradientTexture2D_2pkyf")
 corner_detail = 1
 shadow_blur = 0
@@ -1444,6 +1444,27 @@ content_margin_bottom = -1.0
 script = ExtResource("2_2pkyf")
 color = Color(1, 1, 1, 1)
 texture = SubResource("GradientTexture2D_kk425")
+corner_detail = 1
+shadow_blur = 0
+
+[sub_resource type="Gradient" id="Gradient_w7mbl"]
+offsets = PackedFloat32Array(0, 0.9932432)
+colors = PackedColorArray(1, 1, 1, 0.3372549, 1, 1, 1, 0.09019608)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w72j2"]
+gradient = SubResource("Gradient_w7mbl")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBox" id="StyleBox_wdiyg"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
+script = ExtResource("2_2pkyf")
+color = Color(1, 1, 1, 0.16470589)
+texture = SubResource("GradientTexture2D_w72j2")
 corner_detail = 1
 shadow_blur = 0
 
@@ -1519,7 +1540,7 @@ Button/styles/disabled = SubResource("StyleBox_og51b")
 Button/styles/focus = SubResource("StyleBox_w72j2")
 Button/styles/hover = SubResource("StyleBox_bsk3a")
 Button/styles/normal = SubResource("StyleBox_0konk")
-Button/styles/pressed = SubResource("StyleBox_og51b")
+Button/styles/pressed = SubResource("StyleBox_wdiyg")
 ProgressBar/colors/font_color = Color(1, 1, 1, 1)
 ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
 ProgressBar/font_sizes/font_size = 13

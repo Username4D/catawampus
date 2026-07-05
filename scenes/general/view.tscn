@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://817ttg748dws"]
+
+[ext_resource type="PackedScene" uid="uid://wadhv1n3tafy" path="res://scenes/menus/main_menu.tscn" id="1_7ma7f"]
+[ext_resource type="Script" uid="uid://bshihjx62o5aa" path="res://scripts/general/view.gd" id="1_rb4je"]
+[ext_resource type="Shader" uid="uid://c7n41snua236" path="res://resources/transition.gdshader" id="3_2x841"]
+
+[sub_resource type="Gradient" id="Gradient_xawt1"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0fcrf"]
+gradient = SubResource("Gradient_xawt1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aey85"]
+shader = ExtResource("3_2x841")
+shader_parameter/use_sprite_alpha = true
+shader_parameter/use_transition_texture = false
+shader_parameter/transition_texture = SubResource("GradientTexture1D_0fcrf")
+shader_parameter/transition_type = 0
+shader_parameter/position = Vector2(0, 0)
+shader_parameter/invert = false
+shader_parameter/grid_size = Vector2(0, -1)
+shader_parameter/rotation_angle = 0.0
+shader_parameter/global_x_mirror = false
+shader_parameter/global_y_mirror = true
+shader_parameter/local_x_mirror = false
+shader_parameter/local_y_mirror = false
+shader_parameter/stagger = Vector2(0, 0)
+shader_parameter/cumulative_stagger_flip = false
+shader_parameter/cumulative_stagger = Vector2(0, 0)
+shader_parameter/stagger_frequency = Vector2i(2, 2)
+shader_parameter/flip_frequency = Vector2i(1, 1)
+shader_parameter/basic_feather = 0.0
+shader_parameter/use_mask_size = false
+shader_parameter/mask_size = Vector2(100, 100)
+shader_parameter/edges = 6
+shader_parameter/shape_feather = 0.1
+shader_parameter/sectors = 4
+shader_parameter/clock_feather = 0.0
+shader_parameter/progress_bias = Vector2(0, 0)
+
+[node name="view" type="Control" unique_id=1944282249]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rb4je")
+
+[node name="content" type="Control" parent="." unique_id=904735061]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="main_menu" parent="content" unique_id=864244726 instance=ExtResource("1_7ma7f")]
+
+[node name="transition" type="CanvasLayer" parent="." unique_id=1855625947]
+layer = 10
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="transition" unique_id=949931410]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="transition/AspectRatioContainer" unique_id=127839053]
+material = SubResource("ShaderMaterial_aey85")
+layout_mode = 2
+color = Color(0, 0, 0, 1)

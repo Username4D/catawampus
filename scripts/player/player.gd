@@ -73,3 +73,7 @@ func _on_death() -> void:
 func _on_checkpoint_collected(pos: Vector2) -> void:
 	last_checkpoint_position = pos
 	print([self.acceleration, speed, jump_strength, has_accelerated]) 
+
+func finish():
+	$ui.show_winscreen()
+	
