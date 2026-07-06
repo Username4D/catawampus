@@ -55,3 +55,8 @@ func _on_settings_button_pressed() -> void:
 	await get_tree().process_frame
 	global_node_handler.view.change_scene(load("res://scenes/menus/settings_menu.tscn"))
 	global_node_handler.view.transition_continue.emit()
+
+func _on_help_button_pressed() -> void:
+	$menu_items/help.visible = true
+	await $menu_items/help/menu.pressed
+	$menu_items/help.visible = false

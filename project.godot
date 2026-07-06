@@ -15,6 +15,10 @@ run/main_scene="uid://817ttg748dws"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://b1so7gi1j1gme"
+
 [autoload]
 
 global_node_handler="*uid://byyxl47ctck0w"
