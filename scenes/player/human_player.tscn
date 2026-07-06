@@ -6,12 +6,19 @@
 [ext_resource type="PackedScene" uid="uid://dsvec8be167xg" path="res://scenes/ui_elements/pause_menu.tscn" id="3_dttpl"]
 [ext_resource type="Texture2D" uid="uid://cvgwn4ww62anw" path="res://assets/button_pause.svg" id="4_7evk0"]
 [ext_resource type="PackedScene" uid="uid://4cve3psslecs" path="res://scenes/ui_elements/win_screen.tscn" id="5_8bnda"]
+[ext_resource type="Texture2D" uid="uid://cltjne0aekghs" path="res://assets/skins/cat_default.svg" id="7_5wml4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_71udy"]
 font_size = 19
 outline_size = 1
 
 [node name="human_player" unique_id=1759193139 instance=ExtResource("1_jtf0w")]
+
+[node name="hitbox" parent="." index="0" unique_id=762497385]
+visible = true
+
+[node name="MeshInstance2D" parent="." index="1" unique_id=1784343318]
+visible = false
 
 [node name="ui" type="CanvasLayer" parent="." index="2" unique_id=185471253]
 script = ExtResource("2_nxxqb")
@@ -77,5 +84,9 @@ visible = false
 z_index = 21
 offset_right = 1152.0
 offset_bottom = 648.0
+
+[node name="cat_image" type="Sprite2D" parent="." index="3" unique_id=1353806176]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_5wml4")
 
 [connection signal="pressed" from="ui/zoom_layer/pause_button" to="ui" method="_on_pause_button_pressed"]

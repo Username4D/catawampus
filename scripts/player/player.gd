@@ -25,6 +25,7 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	$cat_image.skew = velocity.y / 1000 
 	if state == states.ALIVE:
 		progress = clamp(position.x / max_x / 0.01, 0, 100)
 		if is_on_floor():
