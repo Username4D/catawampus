@@ -78,6 +78,7 @@ func _on_death() -> void:
 	has_accelerated = false
 	speed = 0
 	state = states.ALIVE
+	$cat_image.set_instance_shader_parameter('mask_strength', 0)
 
 func _on_checkpoint_collected(pos: Vector2, input_chain: Array) -> void:
 	last_checkpoint_position = pos

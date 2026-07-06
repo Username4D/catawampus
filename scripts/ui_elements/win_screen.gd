@@ -1,11 +1,15 @@
 extends Control
 
 @export var lb_position: int = 1
+var trophy_gains = [8, 5, 3, 3, 1, 0, 0, 0, 0, 0, 0]
+
 
 func _process(delta: float) -> void:
 	$Label.text = str(lb_position) + right_ending(lb_position) + ' Place!'
+	$trophy_label.text = "+ %d Trophies" % trophy_gains[lb_position - 1]
 
 func _on_button_pressed() -> void:
+	player_stats_handler.player_trophies += trophy_gains[lb_position - 1]
 	global_node_handler.view.animate_transition()
 	global_node_handler.view.show_accent = false
 	await global_node_handler.view.transition_midpoint
