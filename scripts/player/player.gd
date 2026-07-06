@@ -25,7 +25,7 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	$cat_image.skew = velocity.y / 1000 
+	$cat_image.skew = velocity.y / 1300 
 	if state == states.ALIVE:
 		progress = clamp(position.x / max_x / 0.01, 0, 100)
 		if is_on_floor():
@@ -60,6 +60,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = speed
 		velocity.y += get_gravity().y * delta
 		move_and_slide()
+	if state == states.DEAD:
+		$cat_image.set_instance_shader_parameter('mask_strength', move_toward($cat_image.get_instance_shader_parameter('mask_strength'), 2, delta * 4))
 
 func _on_death() -> void:
 	state = states.DEAD
@@ -70,6 +72,7 @@ func _on_death() -> void:
 	has_accelerated = false
 	speed = 0
 	state = states.ALIVE
+	$cat_image.set_instance_shader_parameter('mask_strength', 0)
 
 func _on_checkpoint_collected(pos: Vector2) -> void:
 	last_checkpoint_position = pos

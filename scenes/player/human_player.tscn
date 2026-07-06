@@ -7,10 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://cvgwn4ww62anw" path="res://assets/button_pause.svg" id="4_7evk0"]
 [ext_resource type="PackedScene" uid="uid://4cve3psslecs" path="res://scenes/ui_elements/win_screen.tscn" id="5_8bnda"]
 [ext_resource type="Texture2D" uid="uid://cltjne0aekghs" path="res://assets/skins/cat_default.svg" id="7_5wml4"]
+[ext_resource type="Shader" uid="uid://cbcqfim8r04bw" path="res://scenes/player/human_player.gdshader" id="7_g4hoy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_71udy"]
 font_size = 19
 outline_size = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gao7k"]
+shader = ExtResource("7_g4hoy")
 
 [node name="human_player" unique_id=1759193139 instance=ExtResource("1_jtf0w")]
 
@@ -86,6 +90,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="cat_image" type="Sprite2D" parent="." index="3" unique_id=1353806176]
+material = SubResource("ShaderMaterial_gao7k")
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_5wml4")
 
