@@ -40,4 +40,6 @@ func _ready() -> void:
 		await get_tree().process_frame
 
 func _process(delta: float) -> void:
+	AudioServer.set_bus_volume_linear(1, float(player_stats_handler.music_volume) / 10)
+	AudioServer.set_bus_volume_linear(4, float(player_stats_handler.sfx_volume) / 10)
 	AudioServer.set_bus_volume_linear(3, move_toward(AudioServer.get_bus_volume_linear(3), accent_volume if show_accent else 0, delta))
