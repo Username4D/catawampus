@@ -2,6 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://ca5lr5xr5ekss" path="res://scenes/player/base_player.tscn" id="1_tu7b2"]
 [ext_resource type="Script" uid="uid://wh380v8qkon0" path="res://scripts/bot_system/bot.gd" id="2_y56si"]
+[ext_resource type="Shader" uid="uid://cbcqfim8r04bw" path="res://scenes/player/human_player.gdshader" id="3_gejg3"]
+[ext_resource type="Texture2D" uid="uid://cltjne0aekghs" path="res://assets/skins/cat_default.svg" id="4_83k8m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mqg8b"]
+resource_local_to_scene = true
+shader = ExtResource("3_gejg3")
+shader_parameter/base_alpha_apply = 0.30000000447036
 
 [node name="bot" unique_id=1759193139 groups=["bot"] instance=ExtResource("1_tu7b2")]
 collision_layer = 2
@@ -9,6 +16,12 @@ collision_mask = 4
 script = ExtResource("2_y56si")
 
 [node name="MeshInstance2D" parent="." index="1" unique_id=1784343318]
+visible = false
 self_modulate = Color(0.4509804, 0.5137255, 0.58431375, 0.45490196)
 
 [node name="randomization_timer" type="Timer" parent="." index="2" unique_id=868657504]
+
+[node name="cat_image" type="Sprite2D" parent="." index="3" unique_id=769119508]
+material = SubResource("ShaderMaterial_mqg8b")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_83k8m")

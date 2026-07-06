@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 instance uniform float mask_strength : hint_range(0.0, 2.0) = 0.0;
-
+uniform float base_alpha_apply : hint_range(0.0, 1.0, 0.1) = 1;
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
@@ -11,6 +11,7 @@ void fragment() {
 		COLOR.r += mask_strength;
 		COLOR.g += mask_strength;
 		COLOR.b += mask_strength;
+		COLOR.a *= base_alpha_apply;
 	}
 	if (mask_strength > 1.0) {
 		COLOR.a *= 2.0 - mask_strength;
