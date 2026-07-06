@@ -27,3 +27,8 @@ func show_winscreen():
 	$zoom_layer/win_screen.visible = true
 	$zoom_layer/level_progress.visible = false
 	$zoom_layer/pause_button.visible = false
+	
+
+func _on_pause_button_pressed() -> void:
+	$pause_menu.visible = true
+	self.get_parent().get_parent().process_mode = Node.PROCESS_MODE_DISABLED

@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dsvec8be167xg"]
+
+[ext_resource type="Script" uid="uid://5wpwianvevn1" path="res://scripts/ui_elements/pause_menu.gd" id="1_vxlbo"]
+[ext_resource type="Script" uid="uid://cjmmhbp1b5312" path="res://addons/StyleboxFancy/StyleBorder.gd" id="2_pqdgk"]
+[ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="3_a1hbg"]
+[ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="4_1xdb5"]
+[ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="5_fssu1"]
+
+[sub_resource type="Gradient" id="Gradient_nvk2a"]
+offsets = PackedFloat32Array(0, 0.9932432)
+colors = PackedColorArray(1, 1, 1, 0.57254905, 1, 1, 1, 0.25882354)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t4xki"]
+gradient = SubResource("Gradient_nvk2a")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBox" id="StyleBox_bnr4u"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
+script = ExtResource("3_a1hbg")
+color = Color(1, 1, 1, 0.5529412)
+texture = SubResource("GradientTexture2D_t4xki")
+corner_detail = 1
+shadow_blur = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_dmsrl"]
+font = ExtResource("4_1xdb5")
+font_size = 100
+outline_size = 32
+outline_color = Color(1, 1, 1, 0.16470589)
+
+[node name="pause_menu" type="Control" unique_id=992407811]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vxlbo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=21067519]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.21960784)
+
+[node name="pause_menu" type="Panel" parent="." unique_id=1533910459]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 96.0
+offset_right = 896.0
+offset_bottom = 544.0
+theme_override_styles/panel = SubResource("StyleBox_bnr4u")
+
+[node name="Label" type="Label" parent="pause_menu" unique_id=1580878678]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 640.0
+offset_bottom = 160.0
+text = "paused"
+label_settings = SubResource("LabelSettings_dmsrl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="continue" type="Button" parent="." unique_id=486515598]
+z_index = 2
+layout_mode = 0
+offset_left = 320.0
+offset_top = 320.0
+offset_right = 832.0
+offset_bottom = 384.0
+theme = ExtResource("5_fssu1")
+theme_override_fonts/font = ExtResource("4_1xdb5")
+theme_override_font_sizes/font_size = 39
+text = "Continue"
+
+[node name="menu" type="Button" parent="." unique_id=828203917]
+z_index = 2
+layout_mode = 0
+offset_left = 320.0
+offset_top = 392.0
+offset_right = 832.0
+offset_bottom = 456.0
+theme = ExtResource("5_fssu1")
+theme_override_fonts/font = ExtResource("4_1xdb5")
+theme_override_font_sizes/font_size = 39
+text = "Back to menu
+"
+
+[connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
