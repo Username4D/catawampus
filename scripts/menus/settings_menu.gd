@@ -19,3 +19,4 @@ func _on_slider_changed(x) -> void:
 	if !sliders_ready: return
 	player_stats_handler.music_volume = $music_volume_slider.value
 	player_stats_handler.sfx_volume = $sfx_volume_slider.value
+	player_stats_handler.save()

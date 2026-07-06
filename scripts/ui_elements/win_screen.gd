@@ -10,6 +10,7 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	player_stats_handler.player_trophies += trophy_gains[lb_position - 1]
+	player_stats_handler.save()
 	global_node_handler.view.animate_transition()
 	global_node_handler.view.show_accent = false
 	await global_node_handler.view.transition_midpoint

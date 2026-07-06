@@ -35,10 +35,12 @@ func _process(delta: float) -> void:
 func _on_next_pressed() -> void:
 	if not player_stats_handler.player_trophies < skin_prices[player_stats_handler.player_skin + 1] and player_stats_handler.player_skin != 6:
 		player_stats_handler.player_skin += 1
+		player_stats_handler.save()
 
 func _on_prev_pressed() -> void:
 	if player_stats_handler.player_skin != 0:
 		player_stats_handler.player_skin -= 1
+		player_stats_handler.save()
 
 
 func _on_back_pressed() -> void:
