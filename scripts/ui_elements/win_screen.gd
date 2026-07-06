@@ -7,6 +7,7 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	global_node_handler.view.animate_transition()
+	global_node_handler.view.show_accent = false
 	await global_node_handler.view.transition_midpoint
 	await get_tree().process_frame
 	global_node_handler.view.change_scene(load("res://scenes/menus/main_menu.tscn"))

@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://wadhv1n3tafy" path="res://scenes/menus/main_menu.tscn" id="1_7ma7f"]
 [ext_resource type="Script" uid="uid://bshihjx62o5aa" path="res://scripts/general/view.gd" id="1_rb4je"]
 [ext_resource type="Shader" uid="uid://c7n41snua236" path="res://resources/transition.gdshader" id="3_2x841"]
+[ext_resource type="AudioStream" uid="uid://bcno5roang20x" path="res://assets/audio/music/track_base.wav" id="4_xawt1"]
+[ext_resource type="AudioStream" uid="uid://c1os260ex2np8" path="res://assets/audio/music/track_accent.wav" id="5_0fcrf"]
 
 [sub_resource type="Gradient" id="Gradient_xawt1"]
 offsets = PackedFloat32Array(1)
@@ -71,3 +73,13 @@ stretch_mode = 0
 material = SubResource("ShaderMaterial_aey85")
 layout_mode = 2
 color = Color(0, 0, 0, 1)
+
+[node name="audio_track_base" type="AudioStreamPlayer" parent="." unique_id=1125181889]
+stream = ExtResource("4_xawt1")
+autoplay = true
+bus = &"base"
+
+[node name="audio_track_accent" type="AudioStreamPlayer" parent="." unique_id=1721721500]
+stream = ExtResource("5_0fcrf")
+autoplay = true
+bus = &"accent"

@@ -3,6 +3,9 @@ extends Control
 signal transition_midpoint
 signal transition_continue
 
+var accent_volume = 1
+var show_accent = false
+
 func animate_transition():
 	var timer = get_tree().create_timer(0.5)
 	$transition/AspectRatioContainer.visible = true
@@ -28,3 +31,13 @@ func change_scene(new_scene: PackedScene):
 	for i in $content.get_children():
 		i.queue_free()
 	$content.add_child(new_scene.instantiate())
+
+func _ready() -> void:
+	var timer = get_tree().create_timer(1)
+	while timer.time_left != 0:
+		$audio_track_accent.volume_linear = 1 - timer.time_left
+		$audio_track_base.volume_linear = 1 - timer.time_left
+		await get_tree().process_frame
+
+func _process(delta: float) -> void:
+	AudioServer.set_bus_volume_linear(3, move_toward(AudioServer.get_bus_volume_linear(3), accent_volume if show_accent else 0, delta))
