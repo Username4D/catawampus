@@ -45,3 +45,11 @@ func _on_back_pressed() -> void:
 	while !$menu_items.offset.y >= 0:
 		$menu_items.offset.y = move_toward($menu_items.offset.y, 0, get_process_delta_time() * 1600)
 		await get_tree().process_frame
+
+
+func _on_settings_button_pressed() -> void:
+	global_node_handler.view.animate_transition()
+	await global_node_handler.view.transition_midpoint
+	await get_tree().process_frame
+	global_node_handler.view.change_scene(load("res://scenes/menus/settings_menu.tscn"))
+	global_node_handler.view.transition_continue.emit()

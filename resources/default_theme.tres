@@ -1556,6 +1556,23 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 shadow_blur = 0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nva1m"]
+bg_color = Color(1, 1, 1, 0.34901962)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pkyf"]
+bg_color = Color(1, 1, 1, 0.34901962)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_og51b"]
+bg_color = Color(1, 1, 1, 0.34901962)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_og51b"]
+color = Color(1, 1, 1, 0.45882353)
+grow_begin = 21.0
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_uwk1s"]
+
 [resource]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
@@ -1585,3 +1602,8 @@ ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
 ProgressBar/font_sizes/font_size = 13
 ProgressBar/styles/background = SubResource("StyleBox_w7mbl")
 ProgressBar/styles/fill = SubResource("StyleBox_76tm7")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_nva1m")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_2pkyf")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_og51b")
+VScrollBar/styles/scroll = SubResource("StyleBoxLine_og51b")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxLine_uwk1s")
