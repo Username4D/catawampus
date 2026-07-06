@@ -6,15 +6,44 @@
 [ext_resource type="PackedScene" uid="uid://dsvec8be167xg" path="res://scenes/ui_elements/pause_menu.tscn" id="3_dttpl"]
 [ext_resource type="Texture2D" uid="uid://cvgwn4ww62anw" path="res://assets/button_pause.svg" id="4_7evk0"]
 [ext_resource type="PackedScene" uid="uid://4cve3psslecs" path="res://scenes/ui_elements/win_screen.tscn" id="5_8bnda"]
-[ext_resource type="Texture2D" uid="uid://cltjne0aekghs" path="res://assets/skins/cat_default.svg" id="7_5wml4"]
-[ext_resource type="Shader" uid="uid://cbcqfim8r04bw" path="res://scenes/player/human_player.gdshader" id="7_g4hoy"]
+[ext_resource type="PackedScene" uid="uid://beikqg3vxlgxf" path="res://scenes/player/cat_image.tscn" id="7_5wml4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_71udy"]
 font_size = 19
 outline_size = 1
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gao7k"]
-shader = ExtResource("7_g4hoy")
+[sub_resource type="Shader" id="Shader_5wml4"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+instance uniform float mask_strength : hint_range(0.0, 2.0) = 0.0;
+uniform float base_alpha_apply : hint_range(0.0, 1.0, 0.1) = 1;
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	if (COLOR.a != 0.0) {
+		COLOR.r += mask_strength;
+		COLOR.g += mask_strength;
+		COLOR.b += mask_strength;
+		COLOR.a *= base_alpha_apply;
+	}
+	if (mask_strength > 1.0) {
+		COLOR.a *= 2.0 - mask_strength;
+	}
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4hoy"]
+resource_local_to_scene = true
+shader = SubResource("Shader_5wml4")
+shader_parameter/base_alpha_apply = 1.0
 
 [node name="human_player" unique_id=1759193139 instance=ExtResource("1_jtf0w")]
 
@@ -89,9 +118,7 @@ z_index = 21
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="cat_image" type="Sprite2D" parent="." index="3" unique_id=1353806176]
-material = SubResource("ShaderMaterial_gao7k")
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("7_5wml4")
+[node name="cat_image" parent="." index="3" unique_id=1749416592 instance=ExtResource("7_5wml4")]
+material = SubResource("ShaderMaterial_g4hoy")
 
 [connection signal="pressed" from="ui/zoom_layer/pause_button" to="ui" method="_on_pause_button_pressed"]

@@ -22,7 +22,7 @@ signal death
 @export var ui_leaderboard = []
 
 func _ready() -> void:
-	pass
+	$cat_image.skin_index = player_stats_handler.player_skin
 
 func _physics_process(delta: float) -> void:
 	$cat_image.skew = velocity.y / 1300 

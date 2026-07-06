@@ -2,13 +2,40 @@
 
 [ext_resource type="PackedScene" uid="uid://ca5lr5xr5ekss" path="res://scenes/player/base_player.tscn" id="1_tu7b2"]
 [ext_resource type="Script" uid="uid://wh380v8qkon0" path="res://scripts/bot_system/bot.gd" id="2_y56si"]
-[ext_resource type="Shader" uid="uid://cbcqfim8r04bw" path="res://scenes/player/human_player.gdshader" id="3_gejg3"]
-[ext_resource type="Texture2D" uid="uid://cltjne0aekghs" path="res://assets/skins/cat_default.svg" id="4_83k8m"]
+[ext_resource type="PackedScene" uid="uid://beikqg3vxlgxf" path="res://scenes/player/cat_image.tscn" id="3_y56si"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mqg8b"]
+[sub_resource type="Shader" id="Shader_gejg3"]
 resource_local_to_scene = true
-shader = ExtResource("3_gejg3")
-shader_parameter/base_alpha_apply = 0.30000000447036
+code = "shader_type canvas_item;
+
+instance uniform float mask_strength : hint_range(0.0, 2.0) = 0.0;
+uniform float base_alpha_apply : hint_range(0.0, 1.0, 0.1) = 1;
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	if (COLOR.a != 0.0) {
+		COLOR.r += mask_strength;
+		COLOR.g += mask_strength;
+		COLOR.b += mask_strength;
+		COLOR.a *= base_alpha_apply;
+	}
+	if (mask_strength > 1.0) {
+		COLOR.a *= 2.0 - mask_strength;
+	}
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_83k8m"]
+resource_local_to_scene = true
+shader = SubResource("Shader_gejg3")
+shader_parameter/base_alpha_apply = 0.20000000298024
 
 [node name="bot" unique_id=1759193139 groups=["bot"] instance=ExtResource("1_tu7b2")]
 collision_layer = 2
@@ -21,7 +48,5 @@ self_modulate = Color(0.4509804, 0.5137255, 0.58431375, 0.45490196)
 
 [node name="randomization_timer" type="Timer" parent="." index="2" unique_id=868657504]
 
-[node name="cat_image" type="Sprite2D" parent="." index="3" unique_id=769119508]
-material = SubResource("ShaderMaterial_mqg8b")
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_83k8m")
+[node name="cat_image" parent="." index="3" unique_id=1749416592 instance=ExtResource("3_y56si")]
+material = SubResource("ShaderMaterial_83k8m")

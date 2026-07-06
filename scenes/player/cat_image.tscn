@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://beikqg3vxlgxf"]
+
+[ext_resource type="Shader" uid="uid://cbcqfim8r04bw" path="res://scenes/player/human_player.gdshader" id="1_bu74q"]
+[ext_resource type="Texture2D" uid="uid://cltjne0aekghs" path="res://assets/skins/cat_default.svg" id="2_trnv6"]
+[ext_resource type="Script" uid="uid://ct7trku3fh8at" path="res://scripts/player/cat_image.gd" id="3_trnv6"]
+[ext_resource type="Texture2D" uid="uid://ck7isokjuen1h" path="res://assets/skins/cat_brown.svg" id="4_sik4g"]
+[ext_resource type="Texture2D" uid="uid://uwxaaqlrmica" path="res://assets/skins/cat_ginger.svg" id="5_srwcr"]
+[ext_resource type="Texture2D" uid="uid://b2nytcdvbuv5r" path="res://assets/skins/cat_black_grey.svg" id="6_xiqqv"]
+[ext_resource type="Texture2D" uid="uid://cn43krvyl7no3" path="res://assets/skins/black_cat.svg" id="7_fwmfn"]
+[ext_resource type="Texture2D" uid="uid://cs2kua1hg5dfi" path="res://assets/skins/cat_hell.svg" id="8_mqwdx"]
+[ext_resource type="Texture2D" uid="uid://s6clnjnpymuo" path="res://assets/skins/cat_zebra.svg" id="9_dat4d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gao7k"]
+resource_local_to_scene = true
+shader = ExtResource("1_bu74q")
+shader_parameter/base_alpha_apply = 1.0
+
+[node name="cat_image" type="Sprite2D" unique_id=1749416592]
+material = SubResource("ShaderMaterial_gao7k")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_trnv6")
+script = ExtResource("3_trnv6")
+skins = Array[CompressedTexture2D]([ExtResource("2_trnv6"), ExtResource("4_sik4g"), ExtResource("5_srwcr"), ExtResource("6_xiqqv"), ExtResource("7_fwmfn"), ExtResource("8_mqwdx"), ExtResource("9_dat4d")])

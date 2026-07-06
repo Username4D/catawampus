@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://cyo0g8fxftvyp" path="res://scripts/menus/main_menu.gd" id="1_6bivr"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="2_6bivr"]
 [ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="5_imvie"]
-[ext_resource type="Shader" uid="uid://cbcqfim8r04bw" path="res://scenes/player/human_player.gdshader" id="6_8r73w"]
+[ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="6_1hnlc"]
+[ext_resource type="PackedScene" uid="uid://beikqg3vxlgxf" path="res://scenes/player/cat_image.tscn" id="6_8r73w"]
 [ext_resource type="PackedScene" uid="uid://y320gdxkaw4p" path="res://scenes/ui_elements/main_menu_button.tscn" id="6_ng0o5"]
-[ext_resource type="Texture2D" uid="uid://cltjne0aekghs" path="res://assets/skins/cat_default.svg" id="7_1hnlc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ng0o5"]
 font = ExtResource("5_imvie")
@@ -14,8 +14,44 @@ font_size = 100
 outline_size = 32
 outline_color = Color(1, 1, 1, 0.16470589)
 
+[sub_resource type="LabelSettings" id="LabelSettings_50h1w"]
+font = ExtResource("5_imvie")
+
+[sub_resource type="LabelSettings" id="LabelSettings_8r73w"]
+font = ExtResource("5_imvie")
+font_size = 50
+
+[sub_resource type="Shader" id="Shader_1hnlc"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+instance uniform float mask_strength : hint_range(0.0, 2.0) = 0.0;
+uniform float base_alpha_apply : hint_range(0.0, 1.0, 0.1) = 1;
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	if (COLOR.a != 0.0) {
+		COLOR.r += mask_strength;
+		COLOR.g += mask_strength;
+		COLOR.b += mask_strength;
+		COLOR.a *= base_alpha_apply;
+	}
+	if (mask_strength > 1.0) {
+		COLOR.a *= 2.0 - mask_strength;
+	}
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_50h1w"]
-shader = ExtResource("6_8r73w")
+resource_local_to_scene = true
+shader = SubResource("Shader_1hnlc")
 shader_parameter/base_alpha_apply = 1.0
 
 [node name="main_menu" type="Node2D" unique_id=864244726]
@@ -44,9 +80,9 @@ offset_bottom = 768.0
 
 [node name="Label" type="Label" parent="menu_items" unique_id=1044022592]
 offset_left = 128.0
-offset_top = 128.0
+offset_top = 96.0
 offset_right = 1024.0
-offset_bottom = 256.0
+offset_bottom = 224.0
 text = "CATAWAMPUS"
 label_settings = SubResource("LabelSettings_ng0o5")
 horizontal_alignment = 1
@@ -54,9 +90,9 @@ vertical_alignment = 1
 
 [node name="buttons" type="VBoxContainer" parent="menu_items" unique_id=252111000]
 offset_left = 128.0
-offset_top = 320.0
+offset_top = 256.0
 offset_right = 1024.0
-offset_bottom = 480.0
+offset_bottom = 612.0
 theme_override_constants/separation = 12
 
 [node name="play_button" parent="menu_items/buttons" unique_id=289617049 instance=ExtResource("6_ng0o5")]
@@ -71,10 +107,81 @@ label_text = "Levels"
 layout_mode = 2
 label_text = "Settings"
 
-[node name="cat_image" type="Sprite2D" parent="." unique_id=1621602397]
+[node name="skins_button" parent="menu_items/buttons" unique_id=1951708289 instance=ExtResource("6_ng0o5")]
+layout_mode = 2
+label_text = "Skins"
+
+[node name="skin_controller" type="Control" parent="menu_items" unique_id=2065880718]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 648.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="prev" type="Button" parent="menu_items/skin_controller" unique_id=739172437]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 280.0
+offset_right = 384.0
+offset_bottom = 344.0
+theme = ExtResource("6_1hnlc")
+theme_override_fonts/font = ExtResource("5_imvie")
+theme_override_font_sizes/font_size = 31
+text = "previous"
+
+[node name="next" type="Button" parent="menu_items/skin_controller" unique_id=1227249652]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 280.0
+offset_right = 960.0
+offset_bottom = 344.0
+theme = ExtResource("6_1hnlc")
+theme_override_fonts/font = ExtResource("5_imvie")
+theme_override_font_sizes/font_size = 31
+text = "next"
+
+[node name="requirement_label" type="Label" parent="menu_items/skin_controller" unique_id=1482995948]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 344.0
+offset_right = 960.0
+offset_bottom = 376.0
+text = "100 Trophies to unlock"
+label_settings = SubResource("LabelSettings_50h1w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="trophies_label" type="Label" parent="menu_items/skin_controller" unique_id=1622682956]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 152.0
+offset_right = 768.0
+offset_bottom = 216.0
+text = "Trophies: 50"
+label_settings = SubResource("LabelSettings_8r73w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="menu_items/skin_controller" unique_id=150475024]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 408.0
+offset_right = 672.0
+offset_bottom = 472.0
+theme = ExtResource("6_1hnlc")
+theme_override_fonts/font = ExtResource("5_imvie")
+theme_override_font_sizes/font_size = 31
+text = "back"
+
+[node name="cat_image" parent="." unique_id=1749416592 instance=ExtResource("6_8r73w")]
 material = SubResource("ShaderMaterial_50h1w")
 position = Vector2(-576, 392)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("7_1hnlc")
 
 [connection signal="pressed" from="menu_items/buttons/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="menu_items/buttons/skins_button" to="." method="_on_skins_button_pressed"]
+[connection signal="pressed" from="menu_items/skin_controller/prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="menu_items/skin_controller/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="menu_items/skin_controller/back" to="." method="_on_back_pressed"]
