@@ -24,6 +24,10 @@ buses/default_bus_layout="uid://b1so7gi1j1gme"
 global_node_handler="*uid://byyxl47ctck0w"
 player_stats_handler="*uid://cq2eiji1i6eds"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/StyleboxFancy/plugin.cfg", "res://addons/gdterm/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")

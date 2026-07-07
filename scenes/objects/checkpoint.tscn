@@ -20,6 +20,7 @@ script = ExtResource("1_6xeev")
 shape = SubResource("RectangleShape2D_erl1y")
 
 [node name="highlight_effect" type="Polygon2D" parent="." unique_id=1991680555]
+z_index = 24
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(-32, -928, -32, 1024, 32, 1024, 32, -928)
 
