@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="3_a1hbg"]
 [ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="4_1xdb5"]
 [ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="5_fssu1"]
+[ext_resource type="Script" uid="uid://bqir23jyqp6kf" path="res://scripts/ui_elements/button_with_sfx.gd" id="6_pqdgk"]
 
 [sub_resource type="Gradient" id="Gradient_nvk2a"]
 offsets = PackedFloat32Array(0, 0.9932432)
@@ -70,7 +71,7 @@ label_settings = SubResource("LabelSettings_dmsrl")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="continue" type="Button" parent="." unique_id=486515598]
+[node name="continue" type="Button" parent="." unique_id=501334869]
 z_index = 2
 layout_mode = 0
 offset_left = 320.0
@@ -81,8 +82,10 @@ theme = ExtResource("5_fssu1")
 theme_override_fonts/font = ExtResource("4_1xdb5")
 theme_override_font_sizes/font_size = 39
 text = "Continue"
+script = ExtResource("6_pqdgk")
+metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
-[node name="menu" type="Button" parent="." unique_id=828203917]
+[node name="menu" type="Button" parent="." unique_id=1572199418]
 z_index = 2
 layout_mode = 0
 offset_left = 320.0
@@ -94,6 +97,8 @@ theme_override_fonts/font = ExtResource("4_1xdb5")
 theme_override_font_sizes/font_size = 39
 text = "Back to menu
 "
+script = ExtResource("6_pqdgk")
+metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
 [connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

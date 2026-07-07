@@ -8,7 +8,7 @@
 font = ExtResource("3_wx8s7")
 font_size = 29
 
-[node name="main_menu_button" type="Button" unique_id=289617049]
+[node name="main_menu_button" type="Button" unique_id=949485538]
 custom_minimum_size = Vector2(0, 64)
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_n7vgc")
 script = ExtResource("2_qtqff")
+metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
 [node name="Label" type="Label" parent="." unique_id=1410313544]
 layout_mode = 1

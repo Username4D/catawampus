@@ -6,13 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://dsvec8be167xg" path="res://scenes/ui_elements/pause_menu.tscn" id="3_dttpl"]
 [ext_resource type="Texture2D" uid="uid://cvgwn4ww62anw" path="res://assets/button_pause.svg" id="4_7evk0"]
 [ext_resource type="PackedScene" uid="uid://4cve3psslecs" path="res://scenes/ui_elements/win_screen.tscn" id="5_8bnda"]
+[ext_resource type="Script" uid="uid://bqir23jyqp6kf" path="res://scripts/ui_elements/button_with_sfx.gd" id="5_g4hoy"]
 [ext_resource type="PackedScene" uid="uid://beikqg3vxlgxf" path="res://scenes/player/cat_image.tscn" id="7_5wml4"]
+[ext_resource type="AudioStream" uid="uid://u5ipobjo1xow" path="res://assets/audio/sfx/steps.wav" id="9_gao7k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_71udy"]
 font_size = 19
 outline_size = 1
 
-[sub_resource type="Shader" id="Shader_5wml4"]
+[sub_resource type="Shader" id="Shader_g4hoy"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -40,9 +42,9 @@ void fragment() {
 //}
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4hoy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gao7k"]
 resource_local_to_scene = true
-shader = SubResource("Shader_5wml4")
+shader = SubResource("Shader_g4hoy")
 shader_parameter/base_alpha_apply = 1.0
 
 [node name="human_player" unique_id=1759193139 instance=ExtResource("1_jtf0w")]
@@ -84,7 +86,7 @@ label_settings = SubResource("LabelSettings_71udy")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="pause_button" type="Button" parent="ui/zoom_layer" index="1" unique_id=1834703404]
+[node name="pause_button" type="Button" parent="ui/zoom_layer" index="1" unique_id=261069083]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 32.0
@@ -99,6 +101,8 @@ theme_override_font_sizes/font_size = 34
 icon = ExtResource("4_7evk0")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("5_g4hoy")
+metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
 [node name="leaderboard" type="Control" parent="ui/zoom_layer" index="2" unique_id=1291509971]
 unique_name_in_owner = true
@@ -119,6 +123,11 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="cat_image" parent="." index="3" unique_id=1749416592 instance=ExtResource("7_5wml4")]
-material = SubResource("ShaderMaterial_g4hoy")
+material = SubResource("ShaderMaterial_gao7k")
+
+[node name="steps_sfx" type="AudioStreamPlayer" parent="." index="4" unique_id=888176667]
+stream = ExtResource("9_gao7k")
+autoplay = true
+bus = &"sfx"
 
 [connection signal="pressed" from="ui/zoom_layer/pause_button" to="ui" method="_on_pause_button_pressed"]

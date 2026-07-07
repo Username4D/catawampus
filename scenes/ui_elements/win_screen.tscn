@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="1_c00u7"]
 [ext_resource type="Script" uid="uid://c8jgbv3oft2en" path="res://scripts/ui_elements/win_screen.gd" id="1_o3lp8"]
 [ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="2_o3lp8"]
+[ext_resource type="Script" uid="uid://bqir23jyqp6kf" path="res://scripts/ui_elements/button_with_sfx.gd" id="4_g5yvg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ng0o5"]
 font = ExtResource("1_c00u7")
@@ -45,7 +46,7 @@ label_settings = SubResource("LabelSettings_ng0o5")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1330544398]
+[node name="Button" type="Button" parent="." unique_id=1909317555]
 layout_mode = 0
 offset_left = 448.0
 offset_top = 512.0
@@ -55,6 +56,8 @@ theme = ExtResource("2_o3lp8")
 theme_override_fonts/font = ExtResource("1_c00u7")
 theme_override_font_sizes/font_size = 29
 text = "BACK TO MENU"
+script = ExtResource("4_g5yvg")
+metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
 [node name="trophy_label" type="Label" parent="." unique_id=872138603]
 layout_mode = 0

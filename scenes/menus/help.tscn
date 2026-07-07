@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="2_l0ode"]
 [ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="3_hgdt3"]
 [ext_resource type="Theme" uid="uid://bqjhqumk75pg3" path="res://resources/default_theme.tres" id="4_l7yws"]
+[ext_resource type="Script" uid="uid://bqir23jyqp6kf" path="res://scripts/ui_elements/button_with_sfx.gd" id="5_l0ode"]
 
 [sub_resource type="Gradient" id="Gradient_kye87"]
 offsets = PackedFloat32Array(0, 0.9932432)
@@ -67,7 +68,7 @@ label_settings = SubResource("LabelSettings_k8qd1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="menu" type="Button" parent="." unique_id=275743406]
+[node name="menu" type="Button" parent="." unique_id=1518034355]
 z_index = 2
 layout_mode = 0
 offset_left = 320.0
@@ -79,6 +80,8 @@ theme_override_fonts/font = ExtResource("3_hgdt3")
 theme_override_font_sizes/font_size = 39
 text = "Back
 "
+script = ExtResource("5_l0ode")
+metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
 [node name="Label" type="Label" parent="." unique_id=522279466]
 layout_mode = 0

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://beikqg3vxlgxf" path="res://scenes/player/cat_image.tscn" id="6_8r73w"]
 [ext_resource type="PackedScene" uid="uid://y320gdxkaw4p" path="res://scenes/ui_elements/main_menu_button.tscn" id="6_ng0o5"]
 [ext_resource type="PackedScene" uid="uid://v2nwik0ft40g" path="res://scenes/menus/help.tscn" id="7_50h1w"]
+[ext_resource type="Script" uid="uid://bqir23jyqp6kf" path="res://scripts/ui_elements/button_with_sfx.gd" id="8_bre17"]
 [ext_resource type="Texture2D" uid="uid://dpwotvc0u57og" path="res://assets/help.svg" id="8_euy4r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ng0o5"]
@@ -23,7 +24,7 @@ font = ExtResource("5_imvie")
 font = ExtResource("5_imvie")
 font_size = 50
 
-[sub_resource type="Shader" id="Shader_50h1w"]
+[sub_resource type="Shader" id="Shader_88kup"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -51,9 +52,9 @@ void fragment() {
 //}
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_euy4r"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bh4e2"]
 resource_local_to_scene = true
-shader = SubResource("Shader_50h1w")
+shader = SubResource("Shader_88kup")
 shader_parameter/base_alpha_apply = 1.0
 
 [node name="main_menu" type="Node2D" unique_id=864244726]
@@ -174,7 +175,7 @@ theme_override_fonts/font = ExtResource("5_imvie")
 theme_override_font_sizes/font_size = 31
 text = "back"
 
-[node name="help_button" type="Button" parent="menu_items" unique_id=1670437638]
+[node name="help_button" type="Button" parent="menu_items" unique_id=475615276]
 offset_left = 1056.0
 offset_top = 544.0
 offset_right = 1120.0
@@ -183,12 +184,14 @@ theme = ExtResource("6_1hnlc")
 icon = ExtResource("8_euy4r")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("8_bre17")
+metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
 [node name="help" parent="menu_items" unique_id=52718430 instance=ExtResource("7_50h1w")]
 visible = false
 
 [node name="cat_image" parent="." unique_id=1749416592 instance=ExtResource("6_8r73w")]
-material = SubResource("ShaderMaterial_euy4r")
+material = SubResource("ShaderMaterial_bh4e2")
 position = Vector2(-576, 392)
 
 [connection signal="pressed" from="menu_items/buttons/play_button" to="." method="_on_play_button_pressed"]

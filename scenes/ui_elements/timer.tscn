@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgkxm34ivajqm" path="res://scripts/ui_elements/timer.gd" id="1_j1uxf"]
 [ext_resource type="FontFile" uid="uid://dfnv0qexdreyt" path="res://assets/font/Unkempt-Bold.ttf" id="1_wscui"]
+[ext_resource type="AudioStream" uid="uid://clj0xseri6n3u" path="res://assets/audio/sfx/countdown.wav" id="3_jbtib"]
 
 [sub_resource type="Animation" id="Animation_j1uxf"]
 length = 0.001
@@ -299,3 +300,8 @@ text = "3"
 label_settings = SubResource("LabelSettings_8vf42")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=800898812]
+stream = ExtResource("3_jbtib")
+volume_db = -9.914
+bus = &"sfx"
