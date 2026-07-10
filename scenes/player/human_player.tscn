@@ -98,16 +98,10 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 34
-icon = ExtResource("4_7evk0")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("5_g4hoy")
 metadata/_custom_type_script = "uid://bqir23jyqp6kf"
-
-[node name="Sprite2D" type="Sprite2D" parent="ui/zoom_layer/pause_button" index="0" unique_id=1458621688]
-position = Vector2(32, 32)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_7evk0")
 
 [node name="leaderboard" type="Control" parent="ui/zoom_layer" index="2" unique_id=1291509971]
 unique_name_in_owner = true
@@ -120,6 +114,11 @@ offset_bottom = 172.0
 [node name="win_screen" parent="ui/zoom_layer" index="3" unique_id=424118579 instance=ExtResource("5_8bnda")]
 visible = false
 layout_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="ui/zoom_layer" index="4" unique_id=1458621688]
+position = Vector2(64.001, 64)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_7evk0")
 
 [node name="pause_menu" parent="ui" index="1" unique_id=992407811 instance=ExtResource("3_dttpl")]
 visible = false
