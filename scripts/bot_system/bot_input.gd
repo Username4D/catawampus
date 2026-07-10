@@ -7,6 +7,8 @@ class_name BotInput
 @export var press_events = {}
 @export var parse_in_progress = false
 
+signal force_position(position: Vector2)
+
 func _init() -> void:
 	for i in InputMap.get_actions():
 		input_states[str(i)] = false
@@ -48,4 +50,5 @@ func parse_input_chain(input_chain: Array):
 				press(i.action_name)
 			1:
 				release(i.action_name)
+		force_position.emit(i.state)
 	parse_in_progress = false

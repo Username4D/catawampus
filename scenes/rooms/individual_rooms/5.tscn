@@ -2,13 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_yoa55"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="2_y1ekb"]
-[ext_resource type="Resource" uid="uid://1c88df2l1j8t" path="res://resources/bot_macros/5/export_macro (2).tres" id="3_thlm3"]
+[ext_resource type="Resource" uid="uid://bxtduore4uill" path="res://resources/bot_macros/5/export_macro_0.tres" id="3_sfk7j"]
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="3_y1ekb"]
-[ext_resource type="Resource" uid="uid://bi7ggey1c1xc6" path="res://resources/bot_macros/5/export_macro (4).tres" id="5_sfk7j"]
-[ext_resource type="Resource" uid="uid://cyv0r6pk1srsb" path="res://resources/bot_macros/5/export_macro (5).tres" id="6_2135r"]
-[ext_resource type="Resource" uid="uid://drdfiyrp27yc6" path="res://resources/bot_macros/5/export_macro.tres" id="6_thlm3"]
+[ext_resource type="Resource" uid="uid://c6pcqxu4ickgw" path="res://resources/bot_macros/5/export_macro_1.tres" id="4_2135r"]
+[ext_resource type="Resource" uid="uid://bwd6tbgpew52l" path="res://resources/bot_macros/5/export_macro_2.tres" id="5_cmfm7"]
+[ext_resource type="Resource" uid="uid://dy8l6uscr21sy" path="res://resources/bot_macros/5/export_macro_3.tres" id="6_4rfv0"]
+[ext_resource type="Resource" uid="uid://b6r5p2x6lwox2" path="res://resources/bot_macros/5/export_macro_4.tres" id="7_b5c6o"]
+[ext_resource type="Resource" uid="uid://dinsltgh67wvc" path="res://resources/bot_macros/5/export_macro_5.tres" id="8_e5wth"]
 
-[node name="level_part" unique_id=1643637355 instance=ExtResource("1_yoa55")]
+[node name="5" unique_id=1643637355 instance=ExtResource("1_yoa55")]
 
 [node name="end" parent="." index="1" unique_id=2020603390]
 offset_left = 6688.0
@@ -37,7 +39,7 @@ offset_right = 5952.0
 offset_bottom = 1408.0
 
 [node name="checkpoint" parent="." index="6" unique_id=136548088]
-input_chains = Array[Resource]([ExtResource("3_thlm3"), ExtResource("5_sfk7j"), ExtResource("6_2135r"), ExtResource("6_thlm3")])
+input_chains = Array[Resource]([ExtResource("3_sfk7j"), ExtResource("4_2135r"), ExtResource("5_cmfm7"), ExtResource("6_4rfv0"), ExtResource("7_b5c6o"), ExtResource("8_e5wth")])
 
 [node name="spike" parent="." index="7" unique_id=395264293 instance=ExtResource("3_y1ekb")]
 position = Vector2(4128, -96)

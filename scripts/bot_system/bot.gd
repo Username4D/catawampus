@@ -28,6 +28,14 @@ func _ready() -> void:
 	$randomization_timer.start()
 	await $randomization_timer.timeout
 	input.press("ui_accept")
+	input.force_position.connect(apply_state)
+
+func apply_state(state):
+	print(state)
+	position = state.position + Vector2(last_checkpoint_position.x - 768, 0)
+	has_accelerated = state.has_accelerated
+	jump_strength = state.jump_strength
+	speed = state.speed
 
 func _physics_process(delta: float) -> void:
 	$cat_image.skew = velocity.y / 1300 

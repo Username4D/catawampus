@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://bd55fakhtloq3"]
 
 [ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_6e0s3"]
-[ext_resource type="Resource" uid="uid://pqoskccqf8wr" path="res://resources/bot_macros/6/export_macro (2).tres" id="2_31g5b"]
+[ext_resource type="Resource" uid="uid://g304olrgb63t" path="res://resources/bot_macros/6/export_macro_0.tres" id="2_iuc8q"]
 [ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="2_kw38w"]
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="3_bh68q"]
-[ext_resource type="Resource" uid="uid://3rna72misu6r" path="res://resources/bot_macros/6/export_macro (3).tres" id="3_o8unx"]
-[ext_resource type="Resource" uid="uid://dv85r5j3m7yx3" path="res://resources/bot_macros/6/export_macro (5).tres" id="4_iuc8q"]
+[ext_resource type="Resource" uid="uid://byndi4eca07ug" path="res://resources/bot_macros/6/export_macro_1.tres" id="3_ks3he"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="4_octph"]
-[ext_resource type="Resource" uid="uid://b0rpso0msmk2b" path="res://resources/bot_macros/6/export_macro.tres" id="5_ks3he"]
+[ext_resource type="Resource" uid="uid://ddkroaobdr0rb" path="res://resources/bot_macros/6/export_macro_2.tres" id="4_pdk2j"]
+[ext_resource type="Resource" uid="uid://c03yqyccvjbss" path="res://resources/bot_macros/6/export_macro_3.tres" id="5_qpcen"]
 [ext_resource type="PackedScene" uid="uid://cl5vpeai2y225" path="res://scenes/objects/dash_orb.tscn" id="5_tsf6i"]
+[ext_resource type="Resource" uid="uid://b5ghc80tet5dc" path="res://resources/bot_macros/6/export_macro_4.tres" id="6_sublw"]
+[ext_resource type="Resource" uid="uid://dtjv0uncbnuok" path="res://resources/bot_macros/6/export_macro_5.tres" id="7_a6i20"]
 
-[node name="level_part" unique_id=1643637355 instance=ExtResource("1_6e0s3")]
+[node name="6" unique_id=1643637355 instance=ExtResource("1_6e0s3")]
 
 [node name="end" parent="." index="1" unique_id=2020603390]
 offset_left = 7168.0
 offset_right = 7936.0
 
 [node name="checkpoint" parent="." index="2" unique_id=136548088]
-input_chains = Array[Resource]([ExtResource("2_31g5b"), ExtResource("3_o8unx"), ExtResource("4_iuc8q"), ExtResource("5_ks3he")])
+input_chains = Array[Resource]([ExtResource("2_iuc8q"), ExtResource("3_ks3he"), ExtResource("4_pdk2j"), ExtResource("5_qpcen"), ExtResource("6_sublw"), ExtResource("7_a6i20")])
 
 [node name="bridge" parent="." index="3" unique_id=213439993 instance=ExtResource("2_kw38w")]
 offset_left = 2048.0

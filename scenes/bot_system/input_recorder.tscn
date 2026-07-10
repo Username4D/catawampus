@@ -2,18 +2,19 @@
 
 [ext_resource type="Script" uid="uid://b1t8efrhvx0by" path="res://scripts/bot_system/input_recorder.gd" id="1_mt0re"]
 [ext_resource type="TileSet" uid="uid://cq6vndlorddfu" path="res://resources/basic_tiles.tres" id="1_qrhow"]
-[ext_resource type="PackedScene" uid="uid://c1u6c1nf1r2nd" path="res://scenes/rooms/individual_rooms/10.tscn" id="2_g5g8x"]
-[ext_resource type="PackedScene" uid="uid://ca5lr5xr5ekss" path="res://scenes/player/base_player.tscn" id="2_mt0re"]
+[ext_resource type="PackedScene" uid="uid://c1u6c1nf1r2nd" path="res://scenes/rooms/individual_rooms/10.tscn" id="2_blykm"]
 [ext_resource type="Script" uid="uid://duh6tiyqmsx74" path="res://scripts/objects/spike.gd" id="3_1yp1s"]
 [ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="5_1yp1s"]
+[ext_resource type="PackedScene" uid="uid://d4mt06drxisof" path="res://scenes/player/human_player.tscn" id="7_blykm"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="7_g5g8x"]
+[ext_resource type="Script" uid="uid://bbb21bl43llhw" path="res://scripts/general/audio_player.gd" id="8_blykm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esvj3"]
 size = Vector2(57280, 682)
 
 [node name="input_recorder" type="Node2D" unique_id=344916001]
 script = ExtResource("1_mt0re")
-Scene = ExtResource("2_g5g8x")
+Scene = ExtResource("2_blykm")
 
 [node name="background_tilemap" type="TileMapLayer" parent="." unique_id=251673683]
 self_modulate = Color(0.41402155, 0.86829543, 0.9799743, 1)
@@ -28,9 +29,6 @@ limit_bottom = 900
 limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
-
-[node name="player" parent="." unique_id=1759193139 instance=ExtResource("2_mt0re")]
-position = Vector2(-832, 384)
 
 [node name="rooms" type="Node2D" parent="." unique_id=1190318625]
 
@@ -49,5 +47,11 @@ offset_left = -896.0
 offset_top = 416.0
 offset_right = 0.0
 offset_bottom = 768.0
+
+[node name="player" parent="." unique_id=1759193139 instance=ExtResource("7_blykm")]
+position = Vector2(-768, 384)
+
+[node name="audio" type="Node2D" parent="." unique_id=1919690930]
+script = ExtResource("8_blykm")
 
 [connection signal="body_entered" from="void" to="void" method="_on_body_entered"]

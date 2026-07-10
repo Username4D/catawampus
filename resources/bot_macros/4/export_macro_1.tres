@@ -1,0 +1,109 @@
+[gd_resource type="Resource" script_class="BotMacro" format=3 uid="uid://c8x52uw7ru0bl"]
+
+[ext_resource type="Script" uid="uid://droqrckv2bcbj" path="res://scripts/bot_system/bot_input_action.gd" id="1_pqr27"]
+[ext_resource type="Script" uid="uid://bxsi7vh3yljwv" path="res://scripts/bot_system/player_state.gd" id="2_l4ik2"]
+[ext_resource type="Script" uid="uid://bly23fvrye5" path="res://scripts/bot_system/bot_macro.gd" id="3_41y7f"]
+
+[sub_resource type="Resource" id="Resource_yg1uf"]
+script = ExtResource("2_l4ik2")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(1267.8323, 391.92526)
+
+[sub_resource type="Resource" id="Resource_ju23t"]
+script = ExtResource("1_pqr27")
+type = 1
+action_name = "ui_accept"
+time_stamp = 0.8000000000000008
+state = SubResource("Resource_yg1uf")
+
+[sub_resource type="Resource" id="Resource_xo6ik"]
+script = ExtResource("2_l4ik2")
+speed = 633.3333333333348
+position = Vector2(1723.3884, 223.14153)
+
+[sub_resource type="Resource" id="Resource_4w1tt"]
+script = ExtResource("1_pqr27")
+action_name = "ui_accept"
+time_stamp = 1.483333333333333
+state = SubResource("Resource_xo6ik")
+
+[sub_resource type="Resource" id="Resource_fetts"]
+script = ExtResource("2_l4ik2")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(2430.891, 295.92526)
+
+[sub_resource type="Resource" id="Resource_1go15"]
+script = ExtResource("1_pqr27")
+type = 1
+action_name = "ui_accept"
+time_stamp = 2.5666666666666624
+state = SubResource("Resource_fetts")
+
+[sub_resource type="Resource" id="Resource_6w315"]
+script = ExtResource("2_l4ik2")
+speed = 690.0000000000002
+position = Vector2(2511.975, 247.93602)
+
+[sub_resource type="Resource" id="Resource_itcyx"]
+script = ExtResource("1_pqr27")
+action_name = "ui_accept"
+time_stamp = 2.6833333333333287
+state = SubResource("Resource_6w315")
+
+[sub_resource type="Resource" id="Resource_iy5f8"]
+script = ExtResource("2_l4ik2")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(3198.226, 135.92526)
+
+[sub_resource type="Resource" id="Resource_iuw0e"]
+script = ExtResource("1_pqr27")
+type = 1
+action_name = "ui_accept"
+time_stamp = 3.733333333333325
+state = SubResource("Resource_iy5f8")
+
+[sub_resource type="Resource" id="Resource_hb8yb"]
+script = ExtResource("2_l4ik2")
+speed = 680.0000000000005
+position = Vector2(3347.7266, 53.086006)
+
+[sub_resource type="Resource" id="Resource_qapk6"]
+script = ExtResource("1_pqr27")
+action_name = "ui_accept"
+time_stamp = 3.949999999999991
+state = SubResource("Resource_hb8yb")
+
+[sub_resource type="Resource" id="Resource_kjmlj"]
+script = ExtResource("2_l4ik2")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(4340.838, 135.92526)
+
+[sub_resource type="Resource" id="Resource_f6k64"]
+script = ExtResource("1_pqr27")
+type = 1
+action_name = "ui_accept"
+time_stamp = 5.499999999999986
+state = SubResource("Resource_kjmlj")
+
+[sub_resource type="Resource" id="Resource_ipnh0"]
+script = ExtResource("2_l4ik2")
+speed = 691.6666666666669
+position = Vector2(4410.422, 94.30825)
+
+[sub_resource type="Resource" id="Resource_cb0hx"]
+script = ExtResource("1_pqr27")
+action_name = "ui_accept"
+time_stamp = 5.599999999999985
+state = SubResource("Resource_ipnh0")
+
+[resource]
+script = ExtResource("3_41y7f")
+input_chain = [SubResource("Resource_ju23t"), SubResource("Resource_4w1tt"), SubResource("Resource_1go15"), SubResource("Resource_itcyx"), SubResource("Resource_iuw0e"), SubResource("Resource_qapk6"), SubResource("Resource_f6k64"), SubResource("Resource_cb0hx")]

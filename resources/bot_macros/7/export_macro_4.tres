@@ -1,0 +1,134 @@
+[gd_resource type="Resource" script_class="BotMacro" format=3 uid="uid://dq2ycqhmyble5"]
+
+[ext_resource type="Script" uid="uid://droqrckv2bcbj" path="res://scripts/bot_system/bot_input_action.gd" id="1_fml01"]
+[ext_resource type="Script" uid="uid://bxsi7vh3yljwv" path="res://scripts/bot_system/player_state.gd" id="2_rkwm8"]
+[ext_resource type="Script" uid="uid://bly23fvrye5" path="res://scripts/bot_system/bot_macro.gd" id="3_c0e5i"]
+
+[sub_resource type="Resource" id="Resource_iqn8g"]
+script = ExtResource("2_rkwm8")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(1419.4984, 391.92526)
+
+[sub_resource type="Resource" id="Resource_ooqe3"]
+script = ExtResource("1_fml01")
+type = 1
+action_name = "ui_accept"
+time_stamp = 1.016666666666668
+state = SubResource("Resource_iqn8g")
+
+[sub_resource type="Resource" id="Resource_4m5lr"]
+script = ExtResource("2_rkwm8")
+speed = 690.0000000000002
+position = Vector2(1500.5824, 343.93604)
+
+[sub_resource type="Resource" id="Resource_vlrna"]
+script = ExtResource("1_fml01")
+action_name = "ui_accept"
+time_stamp = 1.1333333333333342
+state = SubResource("Resource_4m5lr")
+
+[sub_resource type="Resource" id="Resource_v23qg"]
+script = ExtResource("2_rkwm8")
+speed = 673.3333333333353
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(2241.9995, 263.92526)
+
+[sub_resource type="Resource" id="Resource_hgil3"]
+script = ExtResource("1_fml01")
+type = 1
+action_name = "ui_accept"
+time_stamp = 2.28333333333333
+state = SubResource("Resource_v23qg")
+
+[sub_resource type="Resource" id="Resource_13upw"]
+script = ExtResource("2_rkwm8")
+speed = 663.3333333333355
+position = Vector2(2319.9724, 215.93599)
+
+[sub_resource type="Resource" id="Resource_yjnun"]
+script = ExtResource("1_fml01")
+action_name = "ui_accept"
+time_stamp = 2.3999999999999964
+state = SubResource("Resource_13upw")
+
+[sub_resource type="Resource" id="Resource_8ve8f"]
+script = ExtResource("2_rkwm8")
+speed = 696.6666666666708
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(3098.3032, 135.92526)
+
+[sub_resource type="Resource" id="Resource_mxsm6"]
+script = ExtResource("1_fml01")
+type = 1
+action_name = "ui_accept"
+time_stamp = 3.649999999999992
+state = SubResource("Resource_8ve8f")
+
+[sub_resource type="Resource" id="Resource_b3oj4"]
+script = ExtResource("2_rkwm8")
+speed = 693.3333333333376
+position = Vector2(3133.0537, 114.39156)
+
+[sub_resource type="Resource" id="Resource_7qfch"]
+script = ExtResource("1_fml01")
+action_name = "ui_accept"
+time_stamp = 3.699999999999992
+state = SubResource("Resource_b3oj4")
+
+[sub_resource type="Resource" id="Resource_1pag0"]
+script = ExtResource("2_rkwm8")
+speed = 645.000000000006
+has_accelerated = true
+jump_strength = 360.0
+position = Vector2(3883.496, 7.9252663)
+
+[sub_resource type="Resource" id="Resource_uprv5"]
+script = ExtResource("1_fml01")
+type = 1
+action_name = "ui_accept"
+time_stamp = 4.866666666666655
+state = SubResource("Resource_1pag0")
+
+[sub_resource type="Resource" id="Resource_f3q2a"]
+script = ExtResource("2_rkwm8")
+speed = 640.0000000000061
+position = Vector2(3926.3298, -14.463909)
+
+[sub_resource type="Resource" id="Resource_ob0jh"]
+script = ExtResource("1_fml01")
+action_name = "ui_accept"
+time_stamp = 4.933333333333321
+state = SubResource("Resource_f3q2a")
+
+[sub_resource type="Resource" id="Resource_s7hby"]
+script = ExtResource("2_rkwm8")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(5008.439, 135.92526)
+
+[sub_resource type="Resource" id="Resource_3he6w"]
+script = ExtResource("1_fml01")
+type = 1
+action_name = "ui_accept"
+time_stamp = 6.716666666666648
+state = SubResource("Resource_s7hby")
+
+[sub_resource type="Resource" id="Resource_844tk"]
+script = ExtResource("2_rkwm8")
+speed = 686.666666666667
+position = Vector2(5112.4395, 75.67491)
+
+[sub_resource type="Resource" id="Resource_kkjbm"]
+script = ExtResource("1_fml01")
+action_name = "ui_accept"
+time_stamp = 6.866666666666648
+state = SubResource("Resource_844tk")
+
+[resource]
+script = ExtResource("3_c0e5i")
+input_chain = [SubResource("Resource_ooqe3"), SubResource("Resource_vlrna"), SubResource("Resource_hgil3"), SubResource("Resource_yjnun"), SubResource("Resource_mxsm6"), SubResource("Resource_7qfch"), SubResource("Resource_uprv5"), SubResource("Resource_ob0jh"), SubResource("Resource_3he6w"), SubResource("Resource_kkjbm")]

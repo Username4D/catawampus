@@ -1,0 +1,155 @@
+[gd_resource type="Resource" script_class="BotMacro" format=3 uid="uid://l42wj3d7et3t"]
+
+[ext_resource type="Script" uid="uid://droqrckv2bcbj" path="res://scripts/bot_system/bot_input_action.gd" id="1_wijrw"]
+[ext_resource type="Script" uid="uid://bxsi7vh3yljwv" path="res://scripts/bot_system/player_state.gd" id="2_eummg"]
+[ext_resource type="Script" uid="uid://bly23fvrye5" path="res://scripts/bot_system/bot_macro.gd" id="3_4pixw"]
+
+[sub_resource type="Resource" id="Resource_qko70"]
+script = ExtResource("2_eummg")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(1279.4989, 391.92526)
+
+[sub_resource type="Resource" id="Resource_dikjr"]
+script = ExtResource("1_wijrw")
+type = 1
+action_name = "ui_accept"
+time_stamp = 0.8166666666666675
+state = SubResource("Resource_qko70")
+
+[sub_resource type="Resource" id="Resource_0lufe"]
+script = ExtResource("2_eummg")
+speed = 623.3333333333351
+position = Vector2(2151.028, 319.47473)
+
+[sub_resource type="Resource" id="Resource_2ldeg"]
+script = ExtResource("1_wijrw")
+action_name = "ui_accept"
+time_stamp = 2.166666666666664
+state = SubResource("Resource_0lufe")
+
+[sub_resource type="Resource" id="Resource_j5xmp"]
+script = ExtResource("2_eummg")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(1345.4994, 391.92526)
+
+[sub_resource type="Resource" id="Resource_toeip"]
+script = ExtResource("1_wijrw")
+type = 1
+action_name = "ui_accept"
+time_stamp = 6.366666666666649
+state = SubResource("Resource_j5xmp")
+
+[sub_resource type="Resource" id="Resource_3lqo1"]
+script = ExtResource("2_eummg")
+speed = 623.3333333333351
+position = Vector2(2185.8618, 303.30807)
+
+[sub_resource type="Resource" id="Resource_tqp5b"]
+script = ExtResource("1_wijrw")
+action_name = "ui_accept"
+time_stamp = 7.666666666666645
+state = SubResource("Resource_3lqo1")
+
+[sub_resource type="Resource" id="Resource_g4aqg"]
+script = ExtResource("2_eummg")
+speed = 999.1666666666712
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(3208.189, 327.92526)
+
+[sub_resource type="Resource" id="Resource_01eri"]
+script = ExtResource("1_wijrw")
+type = 1
+action_name = "ui_accept"
+time_stamp = 8.616666666666674
+state = SubResource("Resource_g4aqg")
+
+[sub_resource type="Resource" id="Resource_mwy0s"]
+script = ExtResource("2_eummg")
+speed = 952.5000000000056
+position = Vector2(3679.8423, 180.50835)
+
+[sub_resource type="Resource" id="Resource_emt3w"]
+script = ExtResource("1_wijrw")
+action_name = "ui_accept"
+time_stamp = 9.100000000000032
+state = SubResource("Resource_mwy0s")
+
+[sub_resource type="Resource" id="Resource_t4lsm"]
+script = ExtResource("2_eummg")
+speed = 897.500000000006
+position = Vector2(4006.1338, 158.34163)
+
+[sub_resource type="Resource" id="Resource_0m7d6"]
+script = ExtResource("1_wijrw")
+type = 1
+action_name = "ui_accept"
+time_stamp = 9.450000000000047
+state = SubResource("Resource_t4lsm")
+
+[sub_resource type="Resource" id="Resource_7m5or"]
+script = ExtResource("2_eummg")
+speed = 747.5000000000053
+position = Vector2(4251.6343, 195.89159)
+
+[sub_resource type="Resource" id="Resource_3qklr"]
+script = ExtResource("1_wijrw")
+action_name = "ui_accept"
+time_stamp = 9.750000000000064
+state = SubResource("Resource_7m5or")
+
+[sub_resource type="Resource" id="Resource_62ayd"]
+script = ExtResource("2_eummg")
+speed = 700.0
+has_accelerated = true
+jump_strength = 450.0
+position = Vector2(6038.5405, 455.92526)
+
+[sub_resource type="Resource" id="Resource_jtjuu"]
+script = ExtResource("1_wijrw")
+type = 1
+action_name = "ui_accept"
+time_stamp = 12.30000000000019
+state = SubResource("Resource_62ayd")
+
+[sub_resource type="Resource" id="Resource_mg2lv"]
+script = ExtResource("2_eummg")
+speed = 666.6666666666674
+position = Vector2(6277.7075, 335.64157)
+
+[sub_resource type="Resource" id="Resource_hfcte"]
+script = ExtResource("1_wijrw")
+action_name = "ui_accept"
+time_stamp = 12.650000000000208
+state = SubResource("Resource_mg2lv")
+
+[sub_resource type="Resource" id="Resource_q08oj"]
+script = ExtResource("2_eummg")
+speed = 646.6666666666679
+position = Vector2(6408.8745, 298.8082)
+
+[sub_resource type="Resource" id="Resource_6m14e"]
+script = ExtResource("1_wijrw")
+type = 1
+action_name = "ui_accept"
+time_stamp = 12.850000000000218
+state = SubResource("Resource_q08oj")
+
+[sub_resource type="Resource" id="Resource_32o0h"]
+script = ExtResource("2_eummg")
+speed = 628.333333333335
+position = Vector2(6525.5967, 285.42484)
+
+[sub_resource type="Resource" id="Resource_2njpe"]
+script = ExtResource("1_wijrw")
+action_name = "ui_accept"
+time_stamp = 13.03333333333356
+state = SubResource("Resource_32o0h")
+
+[resource]
+script = ExtResource("3_4pixw")
+input_chain = [SubResource("Resource_dikjr"), SubResource("Resource_2ldeg"), SubResource("Resource_toeip"), SubResource("Resource_tqp5b"), SubResource("Resource_01eri"), SubResource("Resource_emt3w"), SubResource("Resource_0m7d6"), SubResource("Resource_3qklr"), SubResource("Resource_jtjuu"), SubResource("Resource_hfcte"), SubResource("Resource_6m14e"), SubResource("Resource_2njpe")]

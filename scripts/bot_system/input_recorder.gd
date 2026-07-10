@@ -2,6 +2,7 @@ extends Node2D
 
 @export var Scene: PackedScene
 var bot_input_array: Array[BotInputAction] = []
+var position_array: Array[Vector2] = []
 var delta_count = 0
 var recording = false
 
@@ -34,7 +35,8 @@ func checkpoint():
 	await get_tree().process_frame
 	print(macro.input_chain)
 	await get_tree().process_frame
-	ResourceSaver.save(macro, "res://resources/export_macro.tres")
+	var dir = DirAccess.open("res://resources/bot_macros/%s" % $rooms.get_child(0).name)
+	ResourceSaver.save(macro, "res://resources/bot_macros/%s/export_macro_%d.tres" % [$rooms.get_child(0).name, len(dir.get_files())],)
 	print(bot_input_array)
 	recording = false
 func _input(event: InputEvent) -> void:
@@ -45,4 +47,4 @@ func _input(event: InputEvent) -> void:
 	for i in InputMap.get_actions():
 		if event.is_action(i): event_action = i
 	print(event)
-	bot_input_array.append(BotInputAction.new(BotInputAction.input_types.PRESS if event.is_pressed() else BotInputAction.input_types.RELEASE, event_action, delta_count))
+	bot_input_array.append(BotInputAction.new(BotInputAction.input_types.PRESS if event.is_pressed() else BotInputAction.input_types.RELEASE, event_action, delta_count, PlayerState.new($player.speed, $player.has_accelerated, $player.jump_strength, $player.position)))

@@ -6,13 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="4_cjtbq"]
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_oqqab"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="7_cjtbq"]
-[ext_resource type="Resource" uid="uid://1yl2balwpv6k" path="res://resources/bot_macros/1/export_macro.tres" id="7_oqqab"]
-[ext_resource type="Resource" path="res://resources/bot_macros/1/export_macro (2).tres" id="8_kcrfe"]
-[ext_resource type="Resource" path="res://resources/bot_macros/1/export_macro (3).tres" id="9_hnjse"]
-[ext_resource type="Resource" path="res://resources/bot_macros/1/export_macro (4).tres" id="10_n52jp"]
-[ext_resource type="Resource" path="res://resources/bot_macros/1/export_macro (5).tres" id="11_rcyhs"]
+[ext_resource type="Resource" uid="uid://byemm7vt3magd" path="res://resources/bot_macros/1/export_macro_0.tres" id="7_kcrfe"]
+[ext_resource type="Resource" uid="uid://cgiaabsjrahtu" path="res://resources/bot_macros/1/export_macro_1.tres" id="8_hnjse"]
+[ext_resource type="Resource" uid="uid://cblaof8gy5fvp" path="res://resources/bot_macros/1/export_macro_2.tres" id="9_n52jp"]
+[ext_resource type="Resource" uid="uid://dkydmihpq8jg6" path="res://resources/bot_macros/1/export_macro_3.tres" id="10_rcyhs"]
+[ext_resource type="Resource" uid="uid://c8y6lkudkvxk6" path="res://resources/bot_macros/1/export_macro_4.tres" id="11_vcj6f"]
 
-[node name="level_part" unique_id=1643637355 instance=ExtResource("1_d3gx8")]
+[node name="1" unique_id=1643637355 instance=ExtResource("1_d3gx8")]
 
 [node name="end" parent="." index="1" unique_id=2020603390]
 offset_left = 7680.0
@@ -85,4 +85,4 @@ offset_right = 7360.0
 offset_bottom = 1280.0
 
 [node name="checkpoint" parent="." index="21" unique_id=136548088]
-input_chains = Array[Resource]([ExtResource("7_oqqab"), ExtResource("8_kcrfe"), ExtResource("9_hnjse"), ExtResource("10_n52jp"), ExtResource("11_rcyhs")])
+input_chains = Array[Resource]([ExtResource("7_kcrfe"), ExtResource("8_hnjse"), ExtResource("9_n52jp"), ExtResource("10_rcyhs"), ExtResource("11_vcj6f")])

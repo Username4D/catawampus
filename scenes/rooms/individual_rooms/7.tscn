@@ -1,24 +1,26 @@
 [gd_scene format=3 uid="uid://btl1jl5ltrxpi"]
 
 [ext_resource type="PackedScene" uid="uid://4k1he5twl2wb" path="res://scenes/rooms/level_part.tscn" id="1_cml48"]
-[ext_resource type="Resource" uid="uid://4mpbafwbl5tb" path="res://resources/bot_macros/7/export_macro.tres" id="2_8y2vy"]
+[ext_resource type="Resource" uid="uid://rcdl3ywh1tp8" path="res://resources/bot_macros/7/export_macro_0.tres" id="2_6qgqy"]
 [ext_resource type="PackedScene" uid="uid://bodo6c560xmkq" path="res://scenes/objects/saw.tscn" id="2_pja33"]
+[ext_resource type="Resource" uid="uid://dtmudto6kmh7e" path="res://resources/bot_macros/7/export_macro_1.tres" id="3_10pcf"]
 [ext_resource type="PackedScene" uid="uid://dtuimle8bs4i" path="res://scenes/objects/bridge.tscn" id="3_ilo45"]
-[ext_resource type="Resource" uid="uid://dqnh08b3kumkg" path="res://resources/bot_macros/7/export_macro (2).tres" id="3_oaooi"]
-[ext_resource type="Resource" uid="uid://c8ttmjyl3w0qg" path="res://resources/bot_macros/7/export_macro (3).tres" id="4_6qgqy"]
+[ext_resource type="Resource" uid="uid://cldw1n0ft05gs" path="res://resources/bot_macros/7/export_macro_2.tres" id="4_43eor"]
 [ext_resource type="PackedScene" uid="uid://dmcqo6tvjqhl7" path="res://scenes/objects/wall.tscn" id="4_ilo45"]
-[ext_resource type="Resource" uid="uid://c2pxbfui18a7c" path="res://resources/bot_macros/7/export_macro (4).tres" id="5_10pcf"]
 [ext_resource type="PackedScene" uid="uid://bjio32h5wu3ly" path="res://scenes/objects/spike.tscn" id="5_86bnd"]
-[ext_resource type="Resource" uid="uid://dkvprfmeq7hmu" path="res://resources/bot_macros/7/export_macro (5).tres" id="6_43eor"]
+[ext_resource type="Resource" uid="uid://dm80r8wc1cyxw" path="res://resources/bot_macros/7/export_macro_3.tres" id="5_yg1by"]
+[ext_resource type="Resource" uid="uid://dq2ycqhmyble5" path="res://resources/bot_macros/7/export_macro_4.tres" id="6_lhei6"]
+[ext_resource type="Resource" uid="uid://cpct7wkqd28gp" path="res://resources/bot_macros/7/export_macro_5.tres" id="7_3eyt5"]
+[ext_resource type="Resource" uid="uid://b7mv0eyfkflyq" path="res://resources/bot_macros/7/export_macro_6.tres" id="8_y1ejo"]
 
-[node name="level_part" unique_id=1643637355 instance=ExtResource("1_cml48")]
+[node name="7" unique_id=1643637355 instance=ExtResource("1_cml48")]
 
 [node name="end" parent="." index="1" unique_id=2020603390]
 offset_left = 6016.0
 offset_right = 6784.0
 
 [node name="checkpoint" parent="." index="2" unique_id=136548088]
-input_chains = Array[Resource]([ExtResource("2_8y2vy"), ExtResource("3_oaooi"), ExtResource("4_6qgqy"), ExtResource("5_10pcf"), ExtResource("6_43eor")])
+input_chains = Array[Resource]([ExtResource("2_6qgqy"), ExtResource("3_10pcf"), ExtResource("4_43eor"), ExtResource("5_yg1by"), ExtResource("6_lhei6"), ExtResource("7_3eyt5"), ExtResource("8_y1ejo")])
 
 [node name="saw" parent="." index="3" unique_id=1926946074 instance=ExtResource("2_pja33")]
 position = Vector2(1856, -64)
