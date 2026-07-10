@@ -2,7 +2,7 @@ extends Node2D
 
 const level_amount = 10
 
-var bot_names = ["Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer", "Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer"]
+var bot_names = ["Rando1000", "Wow", "x_1999", "hunter_x", "der Bomber", "turkey gAmer", "Messi0934", "jhfsgd", "Export34", "xx_me_xx", "lost_lp09", "xX_gamer_Xx", "hans2011", "redditGuyy", "MelonRobot213", "lol_lol", "MeAtZoo", "CRAZZI", "pablo_0", "bite_byte", "corps", "Sam90", "BlameFFA"]
 @onready var leader_board = $bots.get_children() + [$player]
 var state = 'intro' # intro, gameplay, finished
 

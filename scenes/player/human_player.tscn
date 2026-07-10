@@ -14,7 +14,7 @@
 font_size = 19
 outline_size = 1
 
-[sub_resource type="Shader" id="Shader_g4hoy"]
+[sub_resource type="Shader" id="Shader_gao7k"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -42,9 +42,9 @@ void fragment() {
 //}
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gao7k"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cf538"]
 resource_local_to_scene = true
-shader = SubResource("Shader_g4hoy")
+shader = SubResource("Shader_gao7k")
 shader_parameter/base_alpha_apply = 1.0
 
 [node name="human_player" unique_id=1759193139 instance=ExtResource("1_jtf0w")]
@@ -104,6 +104,11 @@ expand_icon = true
 script = ExtResource("5_g4hoy")
 metadata/_custom_type_script = "uid://bqir23jyqp6kf"
 
+[node name="Sprite2D" type="Sprite2D" parent="ui/zoom_layer/pause_button" index="0" unique_id=1458621688]
+position = Vector2(32, 32)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_7evk0")
+
 [node name="leaderboard" type="Control" parent="ui/zoom_layer" index="2" unique_id=1291509971]
 unique_name_in_owner = true
 anchors_preset = 0
@@ -123,7 +128,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="cat_image" parent="." index="3" unique_id=1749416592 instance=ExtResource("7_5wml4")]
-material = SubResource("ShaderMaterial_gao7k")
+material = SubResource("ShaderMaterial_cf538")
 
 [node name="steps_sfx" type="AudioStreamPlayer" parent="." index="4" unique_id=888176667]
 stream = ExtResource("9_gao7k")
